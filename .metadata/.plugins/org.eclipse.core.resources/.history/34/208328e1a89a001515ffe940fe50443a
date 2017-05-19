@@ -1,0 +1,6 @@
+package chapter11gamezone2;
+
+public abstract class CardGame 
+{
+	protected Card[] cardGame  = new Card[52];
+}

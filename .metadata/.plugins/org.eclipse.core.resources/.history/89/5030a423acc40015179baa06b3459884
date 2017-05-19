@@ -1,0 +1,67 @@
+				Final Project
+	Requirements:
+	 - Must get String and numeric input from the user 
+	  - finalproject.Play.15
+	  - finalproject.DoesItHaveLegs.102
+	  - finalproject.DoesItHaveLegs.133
+	  - finalproject.DoesItHaveLegs.207
+	  - finalproject.DoesItHaveLegs.231
+	  - finalproject.DoesItHaveLegs.245
+	  - finalproject.DoesItHaveLegs.259
+	  - finalproject.DoesItHaveLegs.265
+	 - Must use random
+	  - finalproject.DoesItHaveLegs.148
+	  - finalproject.DoesItHaveLegs.177
+	  - finalproject.DoesItHaveLegs.210
+	  - finalproject.BlackJack.18
+	 - Must have at least 2 supporting classes
+	  - finalproject.Play.4
+	  - finalproject.BinaryTree.4
+	  - finalproject.DoesItHaveLegs.2-8	 
+	  - finalproject.Node.4 
+	  - finalproject.BlackJack.4
+	 - Must have a method that returns an array or takes an array as an argument
+	  - finalproject.Node.290 -> finalproject.BinaryTree.78
+	  - finalproject.Node.294 -> finalproject.BinaryTree.86
+	 - Must have an if statement
+	  - finalproject.Play.26
+	  - finalproject.DoesItHaveLegs.75
+	  - finalproject.DoesItHaveLegs.135
+	  - finalproject.DoesItHaveLegs.150
+	  - finalproject.DoesItHaveLegs.179
+	  - finalproject.DoesItHaveLegs.191
+	  - finalproject.DoesItHaveLegs.208
+	  - finalproject.DoesItHaveLegs.211
+	  - finalproject.Node.149
+	  - finalproject.Node.188
+	  - finalproject.Node.231
+	  - finalproject.Node.267
+	  - finalproject.Node.275
+	  - finalproject.Node.295
+	  - finalproject.Node.299
+	  - finalproject.BlackJack.37
+	  - finalproject.BlackJack.61
+	  - finalproject.BlackJack.106
+	 - Must have a switch statement
+	  - finalproject.Play.17
+	  - finalproject.DoesItHaveLegs.246
+	 - Must have 2 loops
+	  - finalproject.BinaryTree.58
+	  - finalproject.BinaryTree.61
+	  - finalproject.BinaryTree.68
+	  - finalproject.DoesItHaveLegs.70
+	  - finalproject.DoesItHaveLegs.86
+	  - finalproject.DoesItHaveLegs.122
+	  - finalproject.DoesItHaveLegs.137
+	  - finalproject.DoesItHaveLegs.162
+	  - finalproject.DoesItHaveLegs.233
+	  - finalproject.DoesItHaveLegs.261
+	  - finalproject.BlackJack.32
+	 - Must have an array or an ArrayList
+	  - finalproject.BinaryTree.10
+	 - Must read or write to a file
+	  - finalproject.DoesItHaveLegs.28 -> finalproject.DoesItHaveLegs.17 
+	  - finalproject.DoesItHaveLegs.40 -> finalproject.DoesItHaveLegs.169	 
+	 - Must have a super/sub class or an interface
+	  - finalproject.BlackJack.6
+	 - Must have comments detailing where these requirements are

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Java-Scibek">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Java-Scibek.zip!/" />
+      <root url="jar://$PROJECT_DIR$/FinalProject.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+package finalproject;
+import static betterutils.BetterUtils.*;
+public class Test {
+	public static void main(String[] args)
+	{
+		Poker fun = new Poker();
+		fun.play();
+	}
+}

@@ -1,0 +1,13 @@
+package chapter13exercise10;
+
+public class CustomerItemOrder 
+{
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		println("Enter your customer id: ");
+		String customerID = keyboard.nextLine();
+		println("Enter the item id: ");
+		String idtemID = keyboard.nextLine();
+	}
+}

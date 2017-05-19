@@ -1,0 +1,18 @@
+package test;
+
+public class testing {
+	public static void main(String[] args)
+	{
+		int inc;
+		String tester = "python";
+		for(inc = 0; inc < tester.length(); inc++)
+		{
+			System.out.println(tester.charAt(inc));
+		}
+	//	System.out.print('a' < 'b');
+		for(inc = 0; inc <1000000000*10; i++)
+		{
+			print inc;
+		}
+	}
+}

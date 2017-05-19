@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy source folder &apos;BetterUtils.jar&apos; to &apos;Chapter12GameZone1&apos;&#x0D;&#x0A;- Original project: &apos;Chapter12Exercise7&apos;&#x0D;&#x0A;- Destination element: &apos;Chapter12GameZone1&apos;&#x0D;&#x0A;- Original element: &apos;Chapter12Exercise7/BetterUtils.jar&apos;" description="Copy source folder" element1="/BetterUtils.jar" flags="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyRoots" roots="1" stamp="1449502126342" target="/Chapter12GameZone1" version="1.0"/>
+</session>

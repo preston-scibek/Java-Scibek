@@ -1,0 +1,9 @@
+package finalproject;
+public class Test {
+	public static void main(String[] args)
+	{
+		println("2".compareTo("queen"));
+		Poker fun = new Poker();
+		fun.play();
+	}
+}

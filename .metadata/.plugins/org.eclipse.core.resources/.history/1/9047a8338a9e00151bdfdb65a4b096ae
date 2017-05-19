@@ -1,0 +1,34 @@
+package chapter13exercise10;
+
+import static betterutils.BetterUtils.println;
+
+import java.io.FileOutputStream;
+
+public class CreateCustomerFile 
+{
+	/**
+	 * preps the file
+	 */
+	public static void prepFile()
+	{
+		try 
+		{
+			String blank = "000,nnaammee,21074";
+			blank =  "                  "+System.getProperty("line.separator");
+			String bankRecords = "RochesterBankRecords.txt";
+			FileOutputStream output = new FileOutputStream(bankRecords, true);
+			for(int i = 0; i<10000; i++)
+			{
+				output.write(blank.getBytes());
+				//output.write("\n".getBytes());
+
+			}
+
+			output.close();
+		}
+		catch (Exception e) 
+		{
+			println("Exception: " + e);
+		}
+	}
+}

@@ -1,0 +1,368 @@
+package finalproject;
+// Supporting Class
+import static betterutils.BetterUtils.*;
+import java.io.Serializable; 
+
+public class Node implements Serializable
+{
+	private static final long serialVersionUID = 1L;
+	private String data;
+	private Boolean isRoot = false;
+	private Node left;
+	private Node right;
+	private Node parent;
+	private BinaryTree binaryParent;
+	private String dataType;
+	private int levelOfTree = 1;
+
+	/**
+	 * makes node with data
+	 * @param data - data of node
+	 */
+	public Node(String data)
+	{
+		this.data = data;
+		this.left = null;
+		this.right = null;
+	}
+
+	/**
+	 * makes new now with data and parent node
+	 * @param data - data of node
+	 * @param parent - parent node
+	 */
+	public Node(String data, Node parent)
+	{
+		this.data = data;
+		this.left = null;
+		this.right = null;
+		this.parent = parent;
+		this.levelOfTree = parent.getLevelOfTree() + 1;
+		this.binaryParent = parent.getBinaryParent();
+	}
+
+	/**
+	 * makes node with parent of binary tree
+	 * @param data - node data
+	 * @param parent - binary tree parent
+	 */
+	public Node(String data, BinaryTree parent)
+	{
+		this.data = data;
+		this.left = null;
+		this.right = null;
+		this.binaryParent = parent;
+	}
+
+	/**
+	 * updates data
+	 * @param data - new data
+	 */
+	public void setData(String data)
+	{
+		this.data = data;
+	}
+
+	/**
+	 * gets the parent node
+	 * @return - get parent node
+	 */
+	public Node getParent()
+	{
+		return this.parent;
+	}
+
+	/**
+	 * gets the data
+	 * @return - returns the data
+	 */
+	public String getData()
+	{
+		return this.data;
+	}
+
+	/**
+	 * gets the left child node
+	 * @return - the left child node
+	 */
+	public Node getLeft()
+	{
+		return this.left;
+	}
+
+	/**
+	 * gets the right child node
+	 * @return - the right child node
+	 */
+	public Node getRight()
+	{
+		return this.right;
+	}
+
+	/**
+	 * sets the right child node
+	 * @param Right - data of right node
+	 */
+	public void setRight(String Right)
+	{
+		this.right = new Node(Right, this);
+		this.right.setBinaryParent(this.binaryParent);
+	}
+
+	/**
+	 * sets the left child node
+	 * @param Left - data of left node
+	 */
+	public void setLeft(String Left)
+	{
+		this.left = new Node(Left, this);
+		this.left.setBinaryParent(this.binaryParent);
+	}
+
+	/**
+	 * gets binary tree parent
+	 * @return - parent tree of all nodes
+	 */
+	public BinaryTree getBinaryParent()
+	{
+		return binaryParent;
+	}
+
+	/**
+	 * creates new parent of all nodes .. because its so possible to update the
+	 * creator
+	 * @param binaryParent - new parent of all nodes
+	 */
+	public void setBinaryParent(BinaryTree binaryParent)
+	{
+		this.binaryParent = binaryParent;
+	}
+
+	/**
+	 * checks if it has child with data
+	 * @return - true if kids false if null
+	 */
+	public boolean hasChild()
+	{
+		try
+		{
+			if(this.right.getData() != null) // If Statement
+			{
+				return true;
+			}
+			else if(this.left.getData() != null)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		catch(Exception e)
+		{
+			return false;
+
+		}
+	}
+
+	/**
+	 * matches data with toMatch
+	 * @param toMatch - string to match data with
+	 * @return - true or false based on if data = toMatch
+	 */
+	public boolean isSame(String toMatch)
+	{
+		return this.data.equalsIgnoreCase(toMatch);
+	}
+
+	/**
+	 * matches child with string
+	 * @param toMatch - string to match with child data
+	 * @return - matching child
+	 */
+	public Node whichChild(String toMatch)
+	{
+		try
+		{
+			if(toMatch.equalsIgnoreCase(this.left.getData())) // If Statement
+			{
+				return this.left;
+			}
+			else if(toMatch.equalsIgnoreCase(this.right.getData()))
+			{
+				return this.right;
+			}
+			else
+			{
+				return this;
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	/**
+	 * gets type of data
+	 * @return - data type
+	 */
+	public String getDataType()
+	{
+		return this.dataType;
+	}
+
+	/**
+	 * set the data type
+	 * @param dataType - new dataType
+	 */
+	public void setDataType(String dataType)
+	{
+		this.dataType = dataType;
+	}
+
+	/**
+	 * prints the nodes of the current node
+	 */
+	public void printNodes()
+	{
+		if(this.left != null) // If Statement
+		{
+			println((this.getLevelOfTree() + 1) + this.left.getData());
+			this.left.printNodes();
+		}
+		else if(this.right != null)
+		{
+			println((this.getLevelOfTree() + 1) + this.right.getData());
+			this.right.printNodes();
+		}
+	}
+
+	/**
+	 * @return - the levelOfTree
+	 */
+	public int getLevelOfTree()
+	{
+		return levelOfTree;
+	}
+
+	/**
+	 * @param levelOfTree - the levelOfTree to set
+	 */
+	public void setLevelOfTree(int levelOfTree)
+	{
+		this.levelOfTree = levelOfTree;
+	}
+
+	/**
+	 * counts the nodes
+	 * @return - the number of nodes
+	 */
+	public int countNodes()
+	{
+		int leftCount = this.levelOfTree;
+		int rightCount = this.levelOfTree;
+		if(this.left != null) // If Statement
+		{
+			leftCount = this.left.countNodes();
+		}
+		else if(this.right != null)
+		{
+			rightCount = this.right.countNodes();
+		}
+		if(leftCount >= rightCount) // If Statement
+		{
+			return leftCount;
+		}
+		else
+		{
+			return rightCount;
+		}
+	}
+
+	/**
+	 * cycles through all nodes to help build the tree of the computer life
+	 */
+	public void cycleNodes()
+	{
+		String[] tree = this.binaryParent.getTree(); // Method That Returns Array
+		String buffer = "    ";
+		try
+		{
+			tree[this.levelOfTree] =
+					tree[this.levelOfTree].concat(this.data + buffer);
+			
+			System.out.print(this.levelOfTree);
+			System.out.print(tree.length);
+			System.out.println("");
+			System.out.println("");
+			
+			
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.print(this.levelOfTree);
+			System.out.print(tree.length);
+			System.out.println("");
+			System.out.println("");
+			String[] newTree = new String[tree.length + 2];
+			for(int i = 0; i < tree.length; i ++)
+			{
+				newTree[i] = tree[i];
+			}
+			newTree[tree.length + 1] = "";
+			this.binaryParent.setTree(newTree.clone());
+			tree = this.binaryParent.getTree();
+			//return;
+		}
+		catch(NullPointerException e)
+		{
+			System.out.print(this.data);
+			System.out.print(tree[this.levelOfTree]);
+			System.out.println("");
+			System.out.println("");
+			
+			tree[this.levelOfTree] = this.data + buffer
+		}
+				
+		this.binaryParent.setTree(tree); // Method That Takes Array As Argument
+		if(this.left != null) // If Statement
+		{
+			this.left.cycleNodes();
+		}
+		if(this.right != null) // If Statement
+		{
+			this.right.cycleNodes();
+		}
+	}
+
+	/**
+	 * @return the isRoot
+	 */
+	public Boolean getIsRoot()
+	{
+		return isRoot;
+	}
+
+	/**
+	 * @param isRoot the isRoot to set
+	 */
+	public void setIsRoot(Boolean isRoot)
+	{
+		this.isRoot = isRoot;
+	}
+	
+	/*public Node[] expandTree(Node[] tree)
+	{
+		Node[] newTree = new Node[tree.length + 1];
+		for(int i = 0; i < tree.length; i ++)
+		{
+			newTree[i] = tree[i];
+		}
+		return newTree;
+		
+	}*/
+
+}

@@ -1,0 +1,65 @@
+package chapter7exercise12;
+
+public class TaxReturn {
+	private final String SSN;
+	private final String LAST_NAME;
+	private final String FIRST_NAME;
+	private String streetAddress;
+	private String cityOfResidence;
+	private String zipCode;
+	private String stateOfResidence;
+	private int annualIncome;
+	private boolean isMarried;
+	private int isTaxLiability;
+	public TaxReturn(String socialNum, String lastName, String firstName,
+			String streetAdd, String cityOfRes, String zip, String stateOfRes,
+			int annIncome, boolean isInLove)
+	{
+		this.SSN = socialNum;
+		this.LAST_NAME = lastName;
+		this.FIRST_NAME = firstName;
+		this.streetAddress = streetAdd;
+		this.cityOfResidence = cityOfRes;
+		this.zipCode = zip;
+		this.stateOfResidence = stateOfRes;
+		this.annualIncome = annIncome;
+		this.isMarried = isInLove;
+		if(this.annualIncome<= 20000)
+		{
+			if(this.isMarried)
+			{
+				this.isTaxLiability = 15;
+			}
+			else
+			{
+				this.isTaxLiability = 14;
+				
+			}
+		}
+		else
+		{
+			if(this.annualIncome>= 50001)
+			{
+				if(this.isMarried)
+				{
+					this.isTaxLiability = 30;
+				}
+				else
+				{
+					this.isTaxLiability = 28;
+				}
+			}
+			else
+			{
+				if(this.isMarried)
+					{
+					this.isTaxLiability = 22;
+					}
+				else
+				{
+					this.isTaxLiability = 20;
+				}
+			}
+		}
+	}
+}

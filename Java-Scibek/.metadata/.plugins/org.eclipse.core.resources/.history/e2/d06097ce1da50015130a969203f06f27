@@ -1,0 +1,156 @@
+package finalproject;
+import static betterutils.BetterUtils.*;
+public class Poker extends CardGame 
+{
+	enum poker {STRAIGHTFLUSH,FOUROFAKIND, FULLHOUSE, FLUSH, STRAIGHT,
+		THREEOFAKIND, TWOPAIR, ONEPAIR, HIGHCARD};
+	/**
+	 * builds a poker
+	 */
+	public Poker()
+	{
+		super();
+		this.shuffle();
+	}
+	/**
+	 * plays the game
+	 */
+	public void play()
+	{
+		Card[] computer = this.deal("Computer");
+		Card[] user = this.deal("User");
+		String[] users = this.whoWins(user);
+		String[] computers = this.whoWins(computer);
+		if(Integer.parseInt(users[0]) > Integer.parseInt(computers[0]))
+		{
+			this.winner();
+		}
+		else if(users[0].equalsIgnoreCase(computers[0]))
+		{
+			if(users[1].compareToIgnoreCase(computers[1]) > 0)
+			{
+				this.winner();
+			}
+			else if(users[1].equalsIgnoreCase(computers[1]))
+			{
+				println("ITS A TIE");
+			}
+			else
+			{
+				this.loser();
+			}
+		}
+		else
+		{
+			println(computers[0]);
+			println(users[0]);
+			this.loser();
+		}
+	}
+	/**
+	 * returns a list of ints as dice rolls
+	 * @param whoIsThisFor - player that the rolls are for
+	 * @return - array of the dice rolls
+	 */
+	public Card[] deal(String whoIsThisFor)
+	{
+		Card[] currentRollsList = new Card[5];
+		print(whoIsThisFor + " drew: ");
+		for(int i = 0; i < 5; i++)
+		{
+			if(whoIsThisFor.equalsIgnoreCase("user"))
+			{
+				currentRollsList[i] = this.cardGame[i];
+				print(currentRollsList[i].toString() + " ");
+				if(currentRollsList[i].getValue().equalsIgnoreCase("ace"))
+				{
+					currentRollsList[i].setValue("zAce");
+				}
+				else if(currentRollsList[i].getValue().equalsIgnoreCase("ace"))
+				{
+					currentRollsList[i].setValue("xKing");
+				}
+			}
+			else
+			{
+				currentRollsList[i] = this.cardGame[i+5];
+				print(currentRollsList[i].toString() + " ");
+				if(currentRollsList[i].getValue().equalsIgnoreCase("ace"))
+				{
+					currentRollsList[i].setValue("zAce");
+				}
+				else if(currentRollsList[i].getValue().equalsIgnoreCase("ace"))
+				{
+					currentRollsList[i].setValue("xKing");
+				}
+			}
+		}
+		print("\n");
+		return currentRollsList;
+	}
+	
+	public String[] whoWins(Card[] hand)
+	{
+		int curRoll = 0;
+		int highRoll = 0;
+		int inc = 0;
+		int count = 0;
+		String highNumber = "0";
+		for(inc = 0; inc < hand.length; inc++)
+		{
+			if(curRoll >= highRoll)
+			{
+				highRoll = curRoll;
+				curRoll = 0;
+			}
+			else
+			{
+				curRoll = 0;
+			}
+			for(count = 0; count < hand.length; count++)
+			{
+				if(hand[inc].getValue().equals(hand[count].getValue()))
+				{
+					curRoll ++;
+					if(curRoll >= highRoll)
+					{
+						if(highNumber.compareTo(hand[inc].getValue()) > 0)
+							{
+								highNumber = hand[inc].getValue();
+							}
+					}
+				}
+				else
+				{
+					continue;
+				}
+			}
+		} 
+		String[] valueOfRollPlusPairing = {String.valueOf(highRoll), highNumber};
+		return valueOfRollPlusPairing;
+	}
+	/**
+	 * unused deal
+	 * @return - nothing
+	 */
+	@Override
+	public boolean deal() 
+	{
+		return false;
+	}
+	@Override
+	public void displayDescription()
+	{
+		println("This poker is played against the computer\n"
+				+ "The person who has the highest hand wins");
+		
+	}
+	@Override
+	public void rules() 
+	{
+		println("WINNER TABLE:\nStraight flush\nFour of a kind"
+				+ "Full house\nFlush\nStraight\nThree of a kind\nTwo pair"
+				+ "\nOne pair\nHigh card");
+		
+	}
+}

@@ -1,0 +1,18 @@
+package finalproject;
+import static betterutils.BetterUtils.*;
+public class MiniGame 
+{
+	public void winner()
+	{
+		println("YOU ARE THE WINNER CONGRATULATIONS");
+	}
+	public void loser()
+	{
+		println("YOU ARE THE LOSER HAHAHAHAHAH");
+	}
+	public void rules()
+	{
+		println("HOW TO PLAY:\n1. Human Vs Computer\n2.No Modifying"
+				+ " Source Code\n3. Type Into Console To Play");
+	}
+}

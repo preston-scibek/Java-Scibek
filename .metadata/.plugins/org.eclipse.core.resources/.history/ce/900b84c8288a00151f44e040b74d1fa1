@@ -1,0 +1,109 @@
+package chapter8exercise9;
+
+import java.util.Scanner;
+
+public class PhoneNumbers 
+{
+	public static int checkIfInList(String[] array, String toCheck)
+	{
+		int inc = 0;
+		for(inc = 0; inc < array.length; inc++)
+		{
+			if(array[inc].equalsIgnoreCase(toCheck))
+			{
+				return inc;
+			}
+			else
+			{
+				continue;
+			}
+		}
+		return 999;
+	}
+	public static void phoneNumberDirectory()
+	{
+		String[] firstNameArrayParallel;
+		String[] phoneNumberArrayParallel;
+		firstNameArrayParallel = new String[30];
+		phoneNumberArrayParallel = new String[30];
+		int inc = 0;
+		for(inc = 0; inc < 10; inc++)
+		{
+			switch(inc)
+			{
+				case 0:
+					phoneNumberArrayParallel[inc] = "(111) 111-1111";
+					firstNameArrayParallel[inc] = "Joe";
+					break;
+				case 1:
+					phoneNumberArrayParallel[inc] "(222) 222-2222";
+					firstNameArrayParallel[inc] = "Bob";
+					break;
+				case 2:
+					phoneNumberArrayParallel[inc] = "(333) 333-3333";
+					firstNameArrayParallel[inc] = "Tom";
+					break;
+				case 3:
+					phoneNumberArrayParallel[inc] = "(444) 4444-4444";
+					firstNameArrayParallel[inc] = "Rob";
+					break;
+				case 4:
+					phoneNumberArrayParallel[inc] = "(555) 555-5555";
+					firstNameArrayParallel[inc] = "Ron";
+					break;
+				case 5:
+					phoneNumberArrayParallel[inc] = "(666) 666-6666";
+					firstNameArrayParallel[inc] = "Jim";
+					break;
+				case 6:
+					phoneNumberArrayParallel[inc] = "(777) 777-7777";
+					firstNameArrayParallel[inc] = "Tim";
+					break;
+				case 7:
+					phoneNumberArrayParallel[inc] = "(888) 888-8888";
+					firstNameArrayParallel[inc] = "Sam";
+					break;
+				case 8:
+					phoneNumberArrayParallel[inc] = "(999) 999-9999";
+					firstNameArrayParallel[inc] = "Ted";
+					break;
+				case 9:
+					phoneNumberArrayParallel[inc] = "(000) 000-000";
+					firstNameArrayParallel[inc] = "Moe";
+					break;
+				default:
+					break;
+				
+			}
+		}
+	int counter = 10;
+	Scanner userKeyboard = new Scanner(System.in);
+	String userName;
+	String userPhone;
+	while(true)
+		userName = userKeyboard.nextLine();
+		if(userName.equals("quit"))
+		{
+			break;
+		}
+		else
+		{
+			int locationOfNumber = 
+					checkIfInList(firstNameArrayParallel, userName);
+			if(locationOfNumber != 999)
+			{
+				System.out.printf("%s's number is %s.\n", userName,
+				phoneNumberArrayParallel[locationOfNumber]);
+			
+			}
+			else if(counter <=30)
+			{
+				firstNameArrayParallel[counter] = userName;
+				userPhone = userKeyboard.nextLine();
+			}
+
+		}
+	}
+	
+	
+}

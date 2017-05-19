@@ -1,0 +1,145 @@
+package chapter13exercise10;
+
+import static betterutils.BetterUtils.println;
+import static java.nio.file.StandardOpenOption.READ;
+import static java.nio.file.StandardOpenOption.WRITE;
+
+import java.io.FileOutputStream;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CreateItemFile 
+{
+	/**
+	 * preps the file
+	 */
+	public static void prepFile()
+	{
+		try 
+		{
+			String blank = "000,aaaaaaaaaaaaaaaaaa";
+			blank =  "                      "+System.getProperty("line.separator");
+			String bankRecords = "CompanyItemFile.txt";
+			FileOutputStream output = new FileOutputStream(bankRecords, true);
+			for(int i = 0; i<10000; i++)
+			{
+				output.write(blank.getBytes());
+			}
+
+			output.close();
+		}
+		catch (Exception e) 
+		{
+			println("Exception: " + e);
+		}
+	}
+	/**
+	 * uploads the data	
+	 */
+	public static void uploadData()
+	{
+		String sample =
+				 "                      "+System.getProperty("line.separator");
+		Path file = Paths.get("CompanyItemFile.txt");
+		ArrayList<String> idsList = new ArrayList<String>();
+		FileChannel fc = null;
+		try
+		{
+			fc = FileChannel.open(file, READ, WRITE);
+		}
+		catch (Exception e) 
+		{
+			println("Exception: " + e);
+		}
+		try
+		{
+			for(int i = 1; i<=10000; i++)
+			{
+				String record = "";
+				fc.position(sample.length() * i - sample.length());
+				ByteBuffer buffer = ByteBuffer.wrap(sample.getBytes());
+				fc.read(buffer);
+				record = new String(buffer.array());
+				if(!record.equalsIgnoreCase(
+						"                   "+
+				System.getProperty("line.separator")))
+				{
+					idsList.add(record.substring(0,3));
+				}
+				else
+				{
+					continue;
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			println("Exception: " + e);
+			e.printStackTrace();
+		}
+		Scanner keyboard = new Scanner(System.in);
+		try
+		{
+			println("Enter an id number: ");
+			String id = keyboard.nextLine();
+			while(!id.equalsIgnoreCase("quit"))
+			{
+				println("Enter the item description: ");
+				String itemDescription = keyboard.nextLine();
+				StringBuffer idBuffer = new StringBuffer(id);
+				idBuffer.ensureCapacity(3);
+				idBuffer.setLength(3);
+				StringBuffer itemBuffer = new StringBuffer(itemDescription);
+				itemBuffer.ensureCapacity(20);
+				itemBuffer.setLength(20);
+				String record = nameBuffer.toString().replaceAll("\\W", " ")
+						+","+
+				idBuffer.toString().replaceAll("\\W", " ")+","+zipBuffer.
+				toString().replaceAll("\\W", " ");
+				fc.position(sample.length() * Integer.parseInt(id) - 
+						sample.length());
+				idsList.add(id);
+				for(int i = 0; i < idsList.size(); i++)
+				{
+					for(int j = 0; j < idsList.size(); j++)
+					{
+						if(idsList.get(i) == idsList.get(j) && i !=j)
+						{
+							fc.close();
+							keyboard.close();
+							println("Error id already exists.");
+							return;
+						}
+					}
+				}
+				ByteBuffer buffer = ByteBuffer.wrap(record.getBytes());
+				fc.write(buffer);
+				println("Enter the next id or quit to exit: ");
+				id = keyboard.nextLine();
+			}
+		}
+		catch (Exception e)
+		{
+			println("Exception: " + e);
+		}
+		try 
+		{
+			fc.close();
+		} 
+		catch (Exception e) 
+		{
+			println("Exception: " + e);
+		}
+		keyboard.close();
+	}
+	public static void main(String[] args)
+	{
+		//prepFile();
+		uploadData();
+	}
+
+}

@@ -1,0 +1,14 @@
+package finalproject;
+import static betterutils.BetterUtils.*;
+public abtract class MiniGame 
+{
+	public void winner()
+	{
+		println("YOU ARE THE WINNER CONGRATULATIONS");
+	}
+	public void loser()
+	{
+		println("YOU ARE THE LOSER HAHAHAHAHAH");
+	}
+	public abstract void rules();
+}

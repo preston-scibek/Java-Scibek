@@ -1,0 +1,10 @@
+package finalproject;
+import static betterutils.BetterUtils.*;
+public class Test {
+	public static void main(String[] args)
+	{
+		println("0".compareTo("1"));
+		Poker fun = new Poker();
+		fun.play();
+	}
+}

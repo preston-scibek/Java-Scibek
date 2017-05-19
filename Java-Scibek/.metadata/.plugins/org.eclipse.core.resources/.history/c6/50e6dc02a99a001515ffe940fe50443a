@@ -1,0 +1,23 @@
+package chapter11gamezone2;
+
+public abstract class CardGame 
+{
+	protected Card[] cardGame  = new Card[52];
+	protected int cardToPlayer;
+	public cardGame()
+	{
+		for(int i = 1; i<5; i++)
+		{
+			for(int j = 1; j<15; j++)
+			{
+				if(i == 1)
+				{
+					cardGame[j*i] = new Card();
+					cardGame[j*i].setSuit("Hearts");
+					
+					cardGame[j*i].setValue(Integer.parseString(j));
+				}
+			}
+		}
+	}
+}

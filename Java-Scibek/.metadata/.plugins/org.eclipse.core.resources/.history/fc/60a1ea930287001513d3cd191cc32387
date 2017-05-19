@@ -1,0 +1,14 @@
+package chapter7exercise12;
+
+public class TaxReturn {
+	private final String SSN;
+	private final String LAST_NAME;
+	private final String FIRST_NAME;
+	private String streetAddress;
+	private String cityOfResidence;
+	private String zipCode;
+	private String stateOfResidence;
+	private int annualIncome;
+	private boolean isMarried;
+	private boolean isTaxLiability;
+}

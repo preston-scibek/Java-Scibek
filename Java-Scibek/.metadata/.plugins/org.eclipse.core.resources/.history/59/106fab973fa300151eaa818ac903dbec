@@ -1,0 +1,11 @@
+package chapter10exercise9;
+import static betterutils.BetterUtils.*;
+
+import java.util.Random;
+public class DemoRocks 
+{
+	public static void main(String[] args)
+	{
+		demoRocks();
+	}
+}

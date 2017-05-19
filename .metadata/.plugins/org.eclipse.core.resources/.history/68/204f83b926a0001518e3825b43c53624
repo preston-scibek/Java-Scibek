@@ -1,0 +1,331 @@
+package finalproject;
+import java.util.Arrays;
+import java.util.Collections;
+
+public abstract class CardGame 
+{
+	protected Card[] cardGame  = new Card[52];
+	protected int cardToPlayer;
+	protected int depthInDeck = 0;
+	/**
+	 * builds a card game
+	 */
+	public CardGame()
+	{
+		int i = 1;
+		for(int j = 0; j<52; j++)
+		{
+			if(i == 1)
+			{
+				switch(j)
+				{
+					case 0:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("2");
+						break;
+					case 1:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("3");
+						break;
+					case 2:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("4");
+						break;
+					case 3:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("5");
+						break;
+					case 4:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("6");
+						break;
+					case 5:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("7");
+						break;
+					case 6:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("8");
+						break;
+					case 7:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("9");
+						break;
+					case 8:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("10");
+						break;
+					case 9:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("Jack");
+						break;
+					case 10:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("Queen");
+						break;
+					case 11:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("King");
+						break;
+					case 12:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Spades");
+						this.cardGame[j].setValue("Ace");
+						i++;
+						break;
+					default:
+						break;
+				}
+			}
+			if(i == 2)
+			{
+				switch(j)
+				{
+					case 13:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("2");
+						break;
+					case 14:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("3");
+						break;
+					case 15:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("4");
+						break;
+					case 16:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("5");
+						break;
+					case 17:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("6");
+						break;
+					case 18:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("7");
+						break;
+					case 19:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("8");
+						break;
+					case 20:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("9");
+						break;
+					case 21:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("10");
+						break;
+					case 22:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("Jack");
+						break;
+					case 23:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("Queen");
+						break;
+					case 24:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("King");
+						break;
+					case 25:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Clubs");
+						this.cardGame[j].setValue("Ace");
+						i++;
+						break;
+					default:
+						break;
+				}
+			}
+			if(i == 3)
+			{
+				switch(j)
+				{
+					case 26:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("2");
+						break;
+					case 27:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("3");
+						break;
+					case 28:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("4");
+						break;
+					case 29:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("5");
+						break;
+					case 30:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("6");
+						break;
+					case 31:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("7");
+						break;
+					case 32:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("8");
+						break;
+					case 33:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("9");
+						break;
+					case 34:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("10");
+						break;
+					case 35:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("Jack");
+						break;
+					case 36:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("Queen");
+						break;
+					case 37:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("King");
+						break;
+					case 38:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Hearts");
+						this.cardGame[j].setValue("Ace");
+						i++;
+						break;
+					default:
+						break;
+				}
+			}
+			if(i == 4)
+			{
+				switch(j)
+				{
+					case 39:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("2");
+						break;
+					case 40:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("3");
+						break;
+					case 41:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("4");
+						break;
+					case 42:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("5");
+						break;
+					case 43:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("6");
+						break;
+					case 44:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("7");
+						break;
+					case 45:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("8");
+						break;
+					case 46:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("9");
+						break;
+					case 47:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("10");
+						break;
+					case 48:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("Jack");
+						break;
+					case 49:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("Queen");
+						break;
+					case 50:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("King");
+						break;
+					case 51:
+						this.cardGame[j] = new Card();
+						this.cardGame[j].setSuit("Diamonds");
+						this.cardGame[j].setValue("Ace");
+						i++;
+						break;
+					default:
+						break;
+				}
+			}
+		}
+	}
+	/**
+	 * shuffles the deck
+	 */
+	public void shuffle()
+	{
+		Collections.shuffle(Arrays.asList(this.cardGame));
+	}
+	/**
+	 * deals a card
+	 */
+	public abstract void deal();
+	/**
+	 * displays a description of the game
+	 */
+	public abstract void displayDescription();
+}

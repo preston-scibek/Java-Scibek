@@ -1,0 +1,54 @@
+package chapter13exercise9;
+
+import static betterutils.BetterUtils.*;
+import static java.nio.file.StandardOpenOption.READ;
+import static java.nio.file.StandardOpenOption.WRITE;
+
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
+public class ReadBankAccountsSequentially 
+{
+	/**
+	 * reads the data	
+	 */
+	public static void readData()
+	{
+		String sample = "NAME    ,0000,99000";
+		sample = "                   ";
+		Path file = Paths.get("RochesterBankRecords.txt");
+		Scanner keyboard = new Scanner(System.in);
+		FileChannel fc = null;
+		try
+		{
+			fc = FileChannel.open(file, READ, WRITE);
+			for(int i = 1; i<=10000; i++)
+			{
+				fc.position(sample.length() * i - sample.length());
+				ByteBuffer buffer = ByteBuffer.wrap(sample.getBytes());
+				fc.read(buffer);
+				String record = String.copyValueOf(buffer.asCharBuffer().array());
+				if(!record.equalsIgnoreCase("                   "))
+				{
+					println(record);
+				}
+				else
+				{
+					continue;
+				}
+			}
+			fc.close();
+		}
+		catch (Exception e)
+		{
+			println("Exception: " + e);
+		}
+		keyboard.close();
+	}
+	public static void main(String[] args)
+	{
+		readData();
+	}
+}

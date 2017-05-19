@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BetterUtils.jar&apos; to &apos;Chapter5Exercise9&apos;&#x0D;&#x0A;- Original project: &apos;Chapter5Exercise6&apos;&#x0D;&#x0A;- Destination element: &apos;Chapter5Exercise9&apos;&#x0D;&#x0A;- Original element: &apos;BetterUtils.jar&apos;" description="Copy file" destination="=Chapter5Exercise9" element1="BetterUtils.jar" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1451853831011" units="0" version="1.0"/>
+</session>

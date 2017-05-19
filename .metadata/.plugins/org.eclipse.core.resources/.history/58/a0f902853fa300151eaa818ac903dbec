@@ -1,0 +1,11 @@
+package chapter10exercise8;
+import static betterutils.BetterUtils.*;
+
+import java.util.Scanner;
+public class UseCourse 
+{
+	public static void main(String[] args)
+	{
+		demoLabCourse();
+	}
+}

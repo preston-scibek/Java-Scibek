@@ -1,0 +1,77 @@
+package finalproject;
+
+import java.io.*; // Supporting Class
+import java.util.Scanner; // Supporting Class
+import static betterutils.BetterUtils.*;
+
+class Python
+{
+	/**
+	 * runs python cuz python is teh best
+	 * @param keyboard - the keyboard to be used
+	 */
+	public static void python(Scanner keyboard)
+	{
+		try
+		{
+
+			final String raw_input = "raw_input(";
+			final String input = "input(";
+			String prg = " ";
+			String userChoice = "";
+			println("Welcome to the Better Language(Python)\n"
+					+ "Enter your python code into the console."
+					+ "\n Type Done when you are finished.");
+			while(!userChoice.equalsIgnoreCase("done")) // Loop 20
+			{
+				if(userChoice.length() > raw_input.length())
+				{
+					for(int i = 0; i < userChoice.length()
+							- raw_input.length(); i++)
+					{
+						if(userChoice.substring(i, i + raw_input.length())
+								.equals(raw_input))
+						{
+							println(userChoice.substring(
+									i + raw_input.length() + 1,
+									userChoice.length() - 2));
+							userChoice = userChoice.substring(0, i - 1)
+									.concat(keyboard.nextLine());
+						}
+						else if(userChoice.substring(i, i + input.length())
+								.equals(input))
+						{
+							println(userChoice.substring(i + input.length() 
+								+ 1, userChoice.length() - 2));
+							userChoice = userChoice.substring(0, i - 1)
+									.concat(keyboard.nextLine());
+						}
+					}
+				}
+				prg = prg.concat("\n" + userChoice);
+				userChoice = keyboard.nextLine();
+			}
+			BufferedWriter out =
+					new BufferedWriter(new FileWriter("things.py"));
+			out.write(prg);
+			out.close();
+
+			ProcessBuilder pb = new ProcessBuilder("python", "things.py");
+			Process p = pb.start();
+			BufferedReader in = new BufferedReader(
+					new InputStreamReader(p.getInputStream()));
+			String ret = " ";
+			ret = (in.readLine());
+			while(ret != null)
+			{
+				println(ret);
+				ret = (in.readLine());
+
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}

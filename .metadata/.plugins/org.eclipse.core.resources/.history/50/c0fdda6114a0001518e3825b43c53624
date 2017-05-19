@@ -1,0 +1,46 @@
+package finalproject;
+import static betterutils.BetterUtils.*;
+public class BlackJack extends CardGame
+{
+	/**
+	 * builds a black jack game
+	 */
+	public BlackJack()
+	{
+		super();
+		this.cardToPlayer = 2;
+	}
+
+	/**
+	 * deals card to the player
+	 */
+	@Override
+	public void deal()
+	{
+
+		int tempDepth = this.depthInDeck;
+		for(int i = tempDepth; i<tempDepth +
+				this.cardToPlayer; i++)
+		{
+			println("Player was dealt " + cardGame[i].getValue()
+					+ " of " + this.cardGame[i].getSuit());
+			this.depthInDeck += 1;
+		}
+		this.cardToPlayer = 1;
+		
+	}
+
+	/**
+	 * displays the description
+	 */
+	@Override
+	public void displayDescription()
+	{
+		println("BLACKJACK:\nA card game in which players try \n"
+				+ "to acquire cards with a face value as close \n"
+				+ "as possible to 21 without going over.");
+		
+		
+	}
+	
+}

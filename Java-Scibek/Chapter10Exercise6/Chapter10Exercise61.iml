@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="BetterUtils3" level="project" />
+    <orderEntry type="library" name="BetterUtils38" level="project" />
+    <orderEntry type="library" name="BetterUtils52" level="project" />
+    <orderEntry type="library" name="BetterUtils13" level="project" />
+    <orderEntry type="library" name="BetterUtils50" level="project" />
+    <orderEntry type="library" name="BetterUtils56" level="project" />
+    <orderEntry type="library" name="BetterUtils8" level="project" />
+    <orderEntry type="library" name="BetterUtils18" level="project" />
+    <orderEntry type="library" name="BetterUtils16" level="project" />
+    <orderEntry type="library" name="BetterUtils53" level="project" />
+    <orderEntry type="library" name="BetterUtils48" level="project" />
+    <orderEntry type="library" name="BetterUtils45" level="project" />
+    <orderEntry type="library" name="BetterUtils47" level="project" />
+    <orderEntry type="library" name="BetterUtils14" level="project" />
+    <orderEntry type="library" name="BetterUtils21" level="project" />
+    <orderEntry type="library" name="BetterUtils17" level="project" />
+    <orderEntry type="library" name="BetterUtils29" level="project" />
+    <orderEntry type="library" name="BetterUtils51" level="project" />
+    <orderEntry type="library" name="BetterUtils10" level="project" />
+    <orderEntry type="library" name="BetterUtils42" level="project" />
+    <orderEntry type="library" name="BetterUtils30" level="project" />
+    <orderEntry type="library" name="BetterUtils12" level="project" />
+    <orderEntry type="library" name="BetterUtils2" level="project" />
+    <orderEntry type="library" name="BetterUtils43" level="project" />
+    <orderEntry type="library" name="BetterUtils46" level="project" />
+    <orderEntry type="library" name="BetterUtils41" level="project" />
+    <orderEntry type="library" name="BetterUtils54" level="project" />
+    <orderEntry type="library" name="BetterUtils19" level="project" />
+    <orderEntry type="library" name="BetterUtils37" level="project" />
+    <orderEntry type="library" name="BetterUtils35" level="project" />
+    <orderEntry type="library" name="BetterUtils4" level="project" />
+    <orderEntry type="library" name="BetterUtils23" level="project" />
+    <orderEntry type="library" name="BetterUtils36" level="project" />
+    <orderEntry type="library" name="BetterUtils32" level="project" />
+    <orderEntry type="library" name="BetterUtils7" level="project" />
+    <orderEntry type="library" name="BetterUtils" level="project" />
+    <orderEntry type="library" name="BetterUtils31" level="project" />
+    <orderEntry type="library" name="BetterUtils44" level="project" />
+    <orderEntry type="library" name="BetterUtils33" level="project" />
+    <orderEntry type="library" name="BetterUtils40" level="project" />
+    <orderEntry type="library" name="BetterUtils39" level="project" />
+    <orderEntry type="library" name="BetterUtils24" level="project" />
+    <orderEntry type="library" name="BetterUtils26" level="project" />
+    <orderEntry type="library" name="BetterUtils25" level="project" />
+    <orderEntry type="library" name="BetterUtils55" level="project" />
+    <orderEntry type="library" name="BetterUtils49" level="project" />
+    <orderEntry type="library" name="BetterUtils15" level="project" />
+    <orderEntry type="library" name="BetterUtils9" level="project" />
+    <orderEntry type="library" name="BetterUtils11" level="project" />
+    <orderEntry type="library" name="BetterUtils27" level="project" />
+    <orderEntry type="library" name="BetterUtils22" level="project" />
+    <orderEntry type="library" name="BetterUtils20" level="project" />
+    <orderEntry type="library" name="BetterUtils6" level="project" />
+    <orderEntry type="library" name="BetterUtils5" level="project" />
+    <orderEntry type="library" name="BetterUtils1" level="project" />
+    <orderEntry type="library" name="BetterUtils28" level="project" />
+    <orderEntry type="library" name="BetterUtils34" level="project" />
+  </component>
+</module>

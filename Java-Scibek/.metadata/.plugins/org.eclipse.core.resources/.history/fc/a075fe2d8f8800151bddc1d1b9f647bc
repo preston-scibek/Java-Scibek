@@ -1,0 +1,190 @@
+package chapter7gamezone2;
+
+import java.util.Scanner;
+
+public class RockPaperScissors2 
+{
+	/**
+	 * RPS game between computer and user
+	 * @param userChoice - user choice
+	 * @param score - current score 
+	 */
+	public static String rockPaperScissors2(String userChoice, String score)
+	{
+		final int SCISSORS = 1;
+		final int ROCK = 2;
+		final int PAPER = 3;
+		final String ROCK_USER = "rock";
+		final String PAPER_USER = "paper";
+		final String SCISSORS_USER = "scissors";
+		Die computerChoice = new Die();
+		int computerNumChoice = computerChoice.getRolledNumber();
+		switch(computerNumChoice)
+		{	
+			case SCISSORS:
+				switch(userChoice)
+				{
+				case SCISSORS_USER:
+					System.out.print("You both choose scissors.");
+					return Character.toString(score.charAt(0)) +
+							Character.toString(score.charAt(1)) + 
+							String.valueOf((Integer.parseInt(
+									Character.toString(
+									score.charAt(2))) + 1));					
+							
+							
+				case ROCK_USER:
+					System.out.print("You win, you choose rock and the "
+							+ "computer choose scissors.");
+					return Integer.toString((Integer.parseInt(
+							Character.toString(
+							score.charAt(0)))) + 1) 
+							+ Character.toString(score.charAt(1)) +
+							Character.toString(score.charAt(2));
+					
+				case PAPER_USER:
+					System.out.print("You lose, you choose paper and the "
+							+ "computer choose scissors.");
+					return Character.toString(score.charAt(0)) +
+							Integer.toString((Integer.parseInt(
+							Character.toString(
+							score.charAt(1)))) + 1) +
+							Character.toString(score.charAt(2));
+				default:
+					System.out.print("Invalid choice, you lose.");
+					return Character.toString(score.charAt(0)) +
+							Integer.toString((Integer.parseInt(
+							Character.toString(
+							score.charAt(1)))) + 1) +
+							Character.toString(score.charAt(2));
+				}
+		case ROCK:
+			switch(userChoice)
+			{
+			case SCISSORS_USER:
+				System.out.print("You lose, you choose scissors"
+						+ " and the computer choose rock.");
+				return Character.toString(score.charAt(0)) +
+						Integer.toString((Integer.parseInt(
+						Character.toString(
+						score.charAt(1)))) + 1) +
+						Character.toString(score.charAt(2));
+			case ROCK_USER:
+				System.out.print("You both choose rock.");
+				return Character.toString(score.charAt(0)) +
+						Character.toString(score.charAt(1)) + 
+						String.valueOf((Integer.parseInt(
+								Character.toString(
+								score.charAt(2))) + 1));
+			case PAPER_USER:
+				System.out.print("You win, you choose paper and the "
+						+ "computer choose rock.");
+				return Integer.toString((Integer.parseInt(
+						Character.toString(
+						score.charAt(0)))) + 1) 
+						+ Character.toString(score.charAt(1)) +
+						Character.toString(score.charAt(2));
+			default:
+				System.out.print("Invalid choice, you lose.");
+				return Character.toString(score.charAt(0)) +
+						Integer.toString((Integer.parseInt(
+						Character.toString(
+						score.charAt(1)))) + 1) +
+						Character.toString(score.charAt(2));
+			}
+		case PAPER:
+			switch(userChoice)
+			{
+			case SCISSORS_USER:
+				System.out.print("You win, you choose scissors and the "
+						+ "computer choose paper.");
+				return Integer.toString((Integer.parseInt(
+						Character.toString(
+						score.charAt(0)))) + 1) 
+						+ Character.toString(score.charAt(1)) +
+						Character.toString(score.charAt(2));
+			case ROCK_USER:
+				System.out.print("You lose, you choose rock and the "
+						+ "computer choose paper.");
+				return Character.toString(score.charAt(0)) +
+						Integer.toString((Integer.parseInt(
+						Character.toString(
+						score.charAt(1)))) + 1) +
+						Character.toString(score.charAt(3));
+			case PAPER_USER:
+				System.out.print("You both choose paper.");
+				return Character.toString(score.charAt(0)) +
+						Character.toString(score.charAt(1)) + 
+						String.valueOf((Integer.parseInt(
+								Character.toString(
+								score.charAt(2))) + 1));
+			default:
+				System.out.print("Invalid choice, you lose.");
+				return Character.toString(score.charAt(0)) +
+						Integer.toString((Integer.parseInt(
+						Character.toString(
+						score.charAt(1)))) + 1) +
+						Character.toString(score.charAt(3));
+			}
+			default:
+				return Character.toString(score.charAt(0)) +
+						Character.toString(score.charAt(1)) + 
+						String.valueOf((Integer.parseInt(
+								Character.toString(
+								score.charAt(2))) + 1));
+				
+		}
+	}
+	public static void beginGame()
+	{
+		Scanner userRockPaperScissorsChoiceKeyboard = new Scanner(System.in);
+		String userChoice = "roooooooooooook";
+		boolean canStart = false;
+		String userFirstTwoCharacters;
+		String score = "000";
+		int inc = 0;
+		for(inc = 0; inc < 10; inc++)
+		{
+			canStart = false;
+			while(canStart != true)
+			{
+				System.out.print("Pick your object\nScissors\nRock\nPaper");
+				userChoice = userRockPaperScissorsChoiceKeyboard.nextLine();
+				userFirstTwoCharacters = 
+				Character.toString(userChoice.charAt(0)) +
+					Character.toString(userChoice.charAt(1));
+				if(userFirstTwoCharacters.equals("sc"))
+				{
+					userChoice = "scissors";
+					canStart = true;
+					break;
+				}
+				else if(userFirstTwoCharacters.equals("ro"))
+				{
+					userChoice = "rock";
+					canStart = true;
+					break;
+				}
+				else if(userFirstTwoCharacters.equals("pa"))
+				{
+					userChoice = "paper";
+					canStart = true;
+					break;
+				}
+				else{
+					continue;
+				}
+			}
+			score = rockPaperScissors2(userChoice.toLowerCase(), score);
+		}
+		System.out.printf("The computer won %c times, you won %c times, and "
+				+ "there were %c ties.", score.charAt(1), score.charAt(0), 
+				score.charAt(2));
+		userRockPaperScissorsChoiceKeyboard.close();
+	}	public static void main(String[] args)
+	{
+
+		beginGame();
+	}
+}
+

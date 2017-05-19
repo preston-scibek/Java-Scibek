@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name=".mylyn1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Java-Scibek/.metadata/.mylyn/repositories.xml(2).zip!/" />
+      <root url="jar://$PROJECT_DIR$/Java-Scibek/.metadata/.mylyn/_tasks.xml.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Java-Scibek/.metadata/.mylyn/tasks.xml.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Java-Scibek/.metadata/.mylyn/repositories.xml.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
+package chapter10exercise3;
+import static betterutils.BetterUtils.*;
+
+import java.util.Scanner;
+public class DemoItemsAndPets 
+{
+	public static void main(String[] args)
+	{
+		demoItems();
+	}
+}

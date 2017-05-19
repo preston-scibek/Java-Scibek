@@ -1,0 +1,21 @@
+package testv11;
+import java.util.Scanner;
+import static betterutils.BetterUtils.*;
+public class testingthiscrap
+{
+	public static void main(String[] args)
+	{	
+		String word = "python";
+		for(int i = 0; i<word.length(); i++)
+		{
+			println(word.charAt(i));
+		}
+		print("%s hi", "steve");
+		print("hi");
+		print("Hi");
+		println("bye");
+		println("bye");
+		prrint("bye\n");
+		print("by");
+	}
+}

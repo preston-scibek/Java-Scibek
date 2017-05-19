@@ -1,0 +1,32 @@
+package chapter8exercise6;
+
+public class DemoSalesPerson
+{
+	/**
+	 * set up an array of sales peoples
+	 */
+	public static void setupSalesArray()
+	{
+		Salesperson[] salespersonArray;
+		salespersonArray = new Salesperson[10];
+		int inc = 0;
+		final int DEFAULT_ID = 9999;
+		final double DEFAULT_SALES = 0.0;
+		for(inc = 0; inc < salespersonArray.length; inc++)
+		{
+			salespersonArray[inc] = new Salesperson(DEFAULT_ID, DEFAULT_SALES);
+		}
+		for(inc = 0; inc < salespersonArray.length; inc++)
+		{
+			System.out.println("SalesPerson " + inc + " has id #: "
+					+ salespersonArray[inc].getIDNumber()
+					+ " and a sales amount number: "
+					+ salespersonArray[inc].getSales());
+		}
+	}
+
+	public static void main(String[] args)
+	{
+		setupSalesArray();
+	}
+}

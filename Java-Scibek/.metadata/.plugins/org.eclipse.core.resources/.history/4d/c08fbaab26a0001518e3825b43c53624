@@ -1,0 +1,104 @@
+package finalproject;
+import static betterutils.BetterUtils.*;
+
+import java.util.Random;
+public class BlackJack extends CardGame
+{
+	int userCount;
+	int computerCount;
+	/**
+	 * builds a black jack game
+	 */
+	public BlackJack()
+	{
+		super();
+		this.shuffle();
+		Random rand = new Random();
+		this.cardToPlayer = 2;
+		this.computerCount = rand.nextInt(6) + 16;
+	}
+
+	/**
+	 * deals card to the player
+	 */
+	@Override
+	public boolean deal()
+	{
+
+		int tempDepth = this.depthInDeck;
+		for(int i = tempDepth; i<tempDepth +
+				this.cardToPlayer; i++)
+		{
+			println("Player was dealt " + cardGame[i].getValue()
+					+ " of " + this.cardGame[i].getSuit());
+			this.depthInDeck += 1;
+			if(cardGame[i].getValue().toLowerCase().
+					equalsIgnoreCase("jack"))
+			{
+				this.userCount += 10;
+			}
+			else if(cardGame[i].getValue().toLowerCase().
+					equalsIgnoreCase("queen"))
+			{
+				this.userCount += 10;
+			}
+			else if(cardGame[i].getValue().toLowerCase().
+					equalsIgnoreCase("ace"))
+			{
+				this.userCount += 11;
+			}
+			else if(cardGame[i].getValue().toLowerCase().
+					equalsIgnoreCase("king"))
+			{
+				this.userCount += 10;
+			}
+			else
+			{
+				this.userCount += Integer.parseInt(cardGame[i].getValue());
+			}
+			
+			if(this.userCount>21)
+			{
+				return this.end();
+			}
+		}
+		this.cardToPlayer = 1;
+		return true;
+	}
+
+	/**
+	 * displays the description
+	 */
+	@Override
+	public void displayDescription()
+	{
+		println("BLACKJACK:\nA card game in which players try \n"
+				+ "to acquire cards with a face value as close \n"
+				+ "as possible to 21 without going over.");	
+	}
+	/**
+	 * hits
+	 */
+	public boolean hit()
+	{
+		this.deal();
+	}
+	public void stay()
+	{
+		this.end();
+	}
+	public boolean end()
+	{
+		if(this.userCount > this.computerCount && this.userCount < 22)
+		{
+			println("YOU WIN " + this.userCount + " to " + this.computerCount);
+		}
+		else
+		{
+			println("YOU lose " + this.userCount + " to " +
+					this.computerCount);
+		}
+		return false;
+	}
+	
+}

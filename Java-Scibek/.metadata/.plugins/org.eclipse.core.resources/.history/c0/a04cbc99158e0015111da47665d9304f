@@ -1,0 +1,11 @@
+package chapter9gamezone1;
+
+import java.util.ArrayList;
+
+public class DoesItHaveLegs
+{
+	public static void game()
+	{
+		ArrayList<String> whatIsIt = new ArrayList<String>();
+	}
+}

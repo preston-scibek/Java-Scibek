@@ -1,0 +1,52 @@
+package chapter11exercise15;
+
+import static betterutils.BetterUtils.*;
+import java.util.Scanner;
+
+public class CreateLoans
+{
+	public static void demoLoans()
+	{
+		Loan[] loanArray = new Loan[5];
+		Scanner keyboard = new Scanner(System.in);
+		println("Enter the prime interest rate: ");
+		double primeInterest = keyboard.nextDouble();
+		keyboard.nextLine();
+		for(int i = 0; i < loanArray.length; i++)
+		{
+			println("What type of loan? Business or Personal: ");
+			char loanType = keyboard.nextLine().toLowerCase().charAt(0);
+			println("Whats the loan number?");
+			int loanNumber = keyboard.nextInt();
+			println("Whats the loan amount?");
+			int loanAmount = keyboard.nextInt();
+			println("Whats the loan term?");
+			int termOfLoan = keyboard.nextInt();
+			keyboard.nextLine();
+			println("Whats your last name?");
+			String customerLastName = keyboard.nextLine();
+			if(loanType == 'b')
+			{
+				String typeOfLoan = "Business Loan";
+				loanArray[i] = new BusinessLoan(loanNumber, customerLastName,
+						loanAmount, termOfLoan, primeInterest, typeOfLoan);
+			}
+			else if(loanType == 'p')
+			{
+				String typeOfLoan = "Personal Loan";
+				loanArray[i] = new BusinessLoan(loanNumber, customerLastName,
+						loanAmount, termOfLoan, primeInterest, typeOfLoan);
+			}
+		}
+		for(int i = 0; i < loanArray.length; i++)
+		{
+			println(loanArray[i].toString());
+		}
+		keyboard.close();
+	}
+
+	public static void main(String[] args)
+	{
+		demoLoans();
+	}
+}

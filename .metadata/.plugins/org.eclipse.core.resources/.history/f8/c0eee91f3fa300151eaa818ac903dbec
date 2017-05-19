@@ -1,0 +1,13 @@
+package chapter10exercise6;
+
+import static betterutils.BetterUtils.println;
+
+import java.util.Random;
+
+public class DemoHSBaseballGame 
+{
+	public static void main(String[] args)
+	{
+		demoBallGame();
+	}
+}

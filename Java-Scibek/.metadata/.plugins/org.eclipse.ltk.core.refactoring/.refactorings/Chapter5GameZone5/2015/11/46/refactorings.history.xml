@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Die.java&apos; to &apos;Chapter7GameZone2/src/chapter7gamezone2&apos;&#x0D;&#x0A;- Original project: &apos;Chapter5GameZone5&apos;&#x0D;&#x0A;- Destination element: &apos;Chapter7GameZone2/src/chapter7gamezone2&apos;&#x0D;&#x0A;- Original element: &apos;chapter5gamezone5.Die.java&apos;" description="Copy compilation unit" destination="=Chapter7GameZone2/src&lt;chapter7gamezone2" element1="/src&lt;chapter5gamezone5{Die.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1447172058576" units="1" version="1.0"/>
+</session>

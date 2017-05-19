@@ -1,0 +1,45 @@
+package chapter12exercise3;
+
+import java.util.Scanner;
+import static betterutils.BetterUtils.*;
+
+public class QuartsToGallonsWithExceptionHandling
+{
+	/**
+	 * tests the new quarts to gallons thing
+	 */
+	public static void testNewQuarts()
+	{
+		final double QUARTS_IN_A_GALLON = 4.0;
+		int quartsNeededForPaintJob = 0;
+		final double FIX_ROUND = 0.5;
+		boolean error = true;
+		Scanner keyboard = new Scanner(System.in);
+		while(error)
+		{
+			try
+			{
+				println("Enter how many quarts you need for the job: ");
+				quartsNeededForPaintJob = keyboard.nextInt();
+				error = false;
+			}
+			catch(Exception e)
+			{
+				error = true;
+			}
+			keyboard.nextLine();
+		}
+		keyboard.close();
+		double gallonsNeededForJob =
+				quartsNeededForPaintJob / QUARTS_IN_A_GALLON;
+		double remainingQuartsNeeded =
+				quartsNeededForPaintJob % QUARTS_IN_A_GALLON;
+		println("The job needs %.0f gallons plus %.0f quarts.",
+				gallonsNeededForJob - FIX_ROUND, remainingQuartsNeeded);
+	}
+
+	public static void main(String[] args)
+	{
+		testNewQuarts();
+	}
+}

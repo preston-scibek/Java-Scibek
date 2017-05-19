@@ -1,0 +1,63 @@
+package test;
+
+import java.io.*;
+import java.util.Scanner;
+import static betterutils.BetterUtils.*;
+class Python
+{
+	public static void main(String[] args)
+	{
+		try
+		{
+			
+			final String raw_input = "raw_input(";
+			final String input = "input(";
+			String prg = " ";
+			String userChoice = "";
+			Scanner keyboard = new Scanner(System.in);
+			println("Welcome to the Better Language(Python)\n"
+					+ "Enter your python code into the console as you would"
+					+ " notepad++.\n Type Done when you are finished.");
+			while(!userChoice.equalsIgnoreCase("done"))
+			{
+				if(userChoice.length()>raw_input.length())
+				{
+					for(int i = 0; i < userChoice.length()-raw_input.length(); i++)
+					{
+						if(userChoice.substring(i, i+raw_input.length()).equals(raw_input))
+						{
+							println(userChoice.substring(i+raw_input.length()+1, userChoice.length()-2));
+							userChoice = userChoice.substring(0, i-1).concat(keyboard.nextLine());
+						}
+						else if(userChoice.substring(i, i+input.length()).equals(input))
+						{
+							println(userChoice.substring(i+input.length()+1, userChoice.length()-2));
+							userChoice = userChoice.substring(0, i-1).concat(keyboard.nextLine());
+						}
+					}
+				}
+				prg = prg.concat("\n"+userChoice);
+				userChoice = keyboard.nextLine();
+			}
+			keyboard.close();
+			println(prg);
+			BufferedWriter out = new BufferedWriter(new FileWriter("things.py"));
+			out.write(prg);
+			out.close();
+
+			ProcessBuilder pb = new ProcessBuilder("python", "things.py");
+			Process p = pb.start();
+
+			BufferedReader in = new BufferedReader(
+					new InputStreamReader(p.getInputStream()));
+			String ret = new String(in.readLine());
+			println(ret);
+			//int ret = new Integer(in.readLine()).intValue();
+			//System.out.println("value is : " + ret);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}

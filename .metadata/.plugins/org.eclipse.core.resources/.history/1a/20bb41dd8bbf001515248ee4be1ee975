@@ -1,0 +1,16 @@
+package chapter10gamezone2;
+
+import java.util.Random;
+
+public class LoadedDie extends Die
+{
+	/**
+	 * assigns random number to variable rolledNumber
+	 */
+	public LoadedDie()
+	{
+		super();
+		this.LOWEST_DIE_VALUE = 2;
+		this.setRolledNumber();
+	}
+}

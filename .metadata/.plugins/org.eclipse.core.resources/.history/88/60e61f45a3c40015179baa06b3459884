@@ -1,0 +1,26 @@
+				Final Project
+	Requirements:
+	 - Must get String and numeric input from the user 
+	  - finalproject.Play.15
+	 - Must use random
+	  - finalproject.DoesItHaveLegs.7
+	 - Must have at least 2 supporting classes
+	  - finalproject.Play.4
+	  - finalproject.BinaryTree.4
+	  - finalproject.DoesItHaveLegs.2-8	  
+	 - Must have a method that returns an array or takes an array as an argument
+	  - finalproject.BinaryTree.78
+	  - finalproject.BinaryTree.86
+	 - Must have an if statement
+	  - finalproject.Play.26
+	 - Must have a switch statement
+	  - finalproject.Play.17
+	 - Must have 2 loops
+	  - finalproject.BinaryTree.58
+	  - finalproject.BinaryTree.61
+	  - finalproject.BinaryTree.68
+	 - Must have an array or an ArrayList
+	  - finalproject.BinaryTree.10
+	 - Must read or write to a file
+	 - Must have a super/sub class or an interface
+	 - Must have comments detailing where these requirements are

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="80" key="org.eclipse.jdt.ui.codeformatter.line_wrapping_tab_page.preview_line_width"/>
+	<item value="0" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_y"/>
+	<item value="438" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_x"/>
+	<item value="9" key="org.eclipse.jdt.uiformatter_page.modify_dialog_tab_page.last_focus_index"/>
+	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="500" key="CallHierarchyViewPart.ratio1"/>
+	<item value="500" key="CallHierarchyViewPart.ratio3"/>
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="108" key="org.eclipse.jdt.uiformatter_page.white_space.java_view.option"/>
+	<item value="0" key="org.eclipse.jdt.uiformatter_page.white_space_tab_page.node"/>
+	<item value="U:" key="org.eclipse.jdt.ui.codeformatter.savepath"/>
+	<item value="0" key="CallHierarchyViewPart.call_mode"/>
+	<item value="25" key="org.eclipse.jdt.uiformatter_page.line_wrapping_tab_page.last_category_index"/>
+	<item value="118" key="org.eclipse.jdt.uiformatter_page.white_space.java_view.inner"/>
+	<item value="3" key="CallHierarchyViewPart.orientation"/>
+	<item value="744" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_height"/>
+	<item value="6" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.last_focus"/>
+	<item value="3" key="TypeHierarchyViewPart.orientation"/>
+	<item value="false" key="org.eclipse.jdt.ui.formatter_page.show_invisible_characters"/>
+	<item value="296" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_x"/>
+	<item value="2" key="CallHierarchyViewPart.field_mode"/>
+	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
+	<item value="0" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_y"/>
+	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
+	<item value="1234" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
+	<item value="863" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
+	<item value="887" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_width"/>
+	<item value="4" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.last_focus"/>
+	<list key="SearchScopeActionGroup.working_set">
+	</list>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="false" key="renameSubpackages"/>
+		<item value="false" key="updateQualifiedNames"/>
+		<item value="*" key="patterns"/>
+		<item value="false" key="updateSimilarElements"/>
+		<item value="1" key="updateSimilarElementsMatchStrategy"/>
+		<item value="false" key="updateTextualMatches"/>
+	</section>
+	<section name="SelfEncapsulateFieldWizard">
+		<item value="true" key="GenerateJavadoc"/>
+	</section>
+	<section name="ProblemSeveritiesConfigurationBlock">
+		<item value="true" key="expanded2"/>
+		<item value="true" key="expanded1"/>
+		<item value="true" key="expanded4"/>
+		<item value="false" key="expanded3"/>
+		<item value="true" key="expanded6"/>
+		<item value="true" key="expanded5"/>
+		<item value="true" key="expanded7"/>
+		<item value="true" key="expanded0"/>
+	</section>
+	<section name="SearchInDialog">
+		<item value="true" key="SearchInProjects"/>
+		<item value="true" key="SearchInAppLibs"/>
+		<item value="true" key="SearchInJRE"/>
+		<item value="true" key="SearchInSources"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
+		<item value="2" key="layout"/>
+		<item value="true" key="group_libraries"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;packageExplorer group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;Aggregate for window 1445961734874&quot;&gt;&#x0D;&#x0A;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;&gt;&#x0D;&#x0A;&lt;xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;/xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;/customFilters&gt;&#x0D;&#x0A;&lt;/packageExplorer&gt;" key="memento"/>
+		<item value="false" key="linkWithEditor"/>
+		<item value="1" key="rootMode"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.FilteredTypesSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="-14" key="DIALOG_Y_ORIGIN"/>
+			<item value="-29" key="DIALOG_X_ORIGIN"/>
+		</section>
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="create_constructor"/>
+		<item value="false" key="create_unimplemented"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
+	</section>
+	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
+		<item value="529" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="696" key="DIALOG_HEIGHT"/>
+		<item value="584" key="DIALOG_X_ORIGIN"/>
+		<item value="49" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item value="600" key="width"/>
+		<item value="400" key="height"/>
+	</section>
+	<section name="CallHierarchySearchScope">
+	</section>
+	<section name="javadoc">
+		<item value="-Xdoclint:none" key="vmparam"/>
+		<item value="public" key="access"/>
+		<item value="false" key="noindex"/>
+		<item value="U:\Java-Scibek\Chapter10Exercise1\javadoc.xml" key="antpath"/>
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="true" key="use"/>
+		<item value="true" key="author"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="false" key="nonavbar"/>
+		<item value="" key="docletpath"/>
+		<item value="C:\Program Files\Java\jdk1.8.0_25\bin\javadoc.exe" key="javadoc_command_history"/>
+		<item value="1.8" key="source"/>
+		<item value="true" key="version"/>
+		<item value="" key="docletname"/>
+		<item value="true" key="splitindex"/>
+		<item value="true" key="fromStandard"/>
+		<item value="false" key="notree"/>
+		<item value="U:\Doc" key="destdir"/>
+		<item value="-Xdoclint:none" key="additionalparam"/>
+		<item value="false" key="openinbrowser"/>
+		<section name="projects">
+			<section name="Chapter3Exercise4">
+				<item value="U:\Java-Scibek\Chapter3Exercise4\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter3Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter9Exercise3">
+				<item value="U:\Java-Scibek\Chapter9Exercise3\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter9Exercise3\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter3Exercise5">
+				<item value="U:\Java-Scibek\Chapter3Exercise5\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter3Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter9Exercise1">
+				<item value="U:\Java-Scibek\Chapter9Exercise1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter9Exercise1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter6GameZone2">
+				<item value="U:\Java-Scibek\Chapter6GameZone2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter6GameZone2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter3Exercise8">
+				<item value="U:\Java-Scibek\Chapter3Exercise8\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter3Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter12Exercise1">
+				<item value="U:\Java-Scibek\Chapter12Exercise1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter12Exercise1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter3Exercise7">
+				<item value="U:\Java-Scibek\Chapter3Exercise7\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter3Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter12Exercise3">
+				<item value="U:\Java-Scibek\Chapter12Exercise3\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter12Exercise3\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter6GameZone4">
+				<item value="U:\Java-Scibek\Chapter6GameZone4\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter6GameZone4\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter12Exercise7">
+				<item value="U:\Java-Scibek\Chapter12Exercise7\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter12Exercise7\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Test">
+				<item value="U:\Java-Scibek\Test\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Test\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter9Exercise10">
+				<item value="U:\Java-Scibek\Chapter9Exercise10\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter9Exercise10\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter6Exercise9">
+				<item value="U:\Java-Scibek\Chapter6Exercise9\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter6Exercise9\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter6Exercise7">
+				<item value="U:\Java-Scibek\Chapter6Exercise7\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter6Exercise7\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter9Exercise5">
+				<item value="U:\Java-Scibek\Chapter9Exercise5\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter9Exercise5\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter6Exercise4">
+				<item value="U:\Java-Scibek\Chapter6Exercise4\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter6Exercise4\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter6Exercise2">
+				<item value="U:\Java-Scibek\Chapter6Exercise2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter6Exercise2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter1GameZone">
+				<item value="U:\Java-Scibek\Chapter1GameZone\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter3Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter13Exercise6">
+				<item value="U:\Java-Scibek\Chapter13Exercise6\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter13Exercise6\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter13Exercise5">
+				<item value="U:\Java-Scibek\Chapter13Exercise5\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter13Exercise5\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter7Exercise2">
+				<item value="U:\Java-Scibek\Chapter7Exercise2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter7Exercise2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter10GameZone2">
+				<item value="U:\Java-Scibek\Chapter10GameZone2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter10GameZone2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter7Exercise7">
+				<item value="U:\Java-Scibek\Chapter7Exercise7\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter7Exercise7\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter8Exercise2">
+				<item value="U:\Java-Scibek\Chapter8Exercise2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter8Exercise2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="TestV1.1">
+				<item value="U:\Java-Scibek\TestV1.1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\TestV1.1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter7Exercise9">
+				<item value="U:\Java-Scibek\Chapter7Exercise9\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter7Exercise9\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter8Exercise4">
+				<item value="U:\Java-Scibek\Chapter8Exercise4\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter8Exercise4\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter2Exercise6">
+				<item value="U:\Java-Scibek\Chapter2Exercise6\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter3Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter8Exercise6">
+				<item value="U:\Java-Scibek\Chapter8Exercise6\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter8Exercise6\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter2Exercise8">
+				<item value="U:\Java-Scibek\Chapter2Exercise8\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter3Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter9GameZone4">
+				<item value="U:\Java-Scibek\Chapter9GameZone4\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter9GameZone4\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter8Exercise9">
+				<item value="U:\Java-Scibek\Chapter8Exercise9\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter8Exercise9\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter9GameZone1">
+				<item value="U:\Java-Scibek\Chapter9GameZone1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter9GameZone1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter13Exercise8">
+				<item value="U:\Java-Scibek\Chapter13Exercise8\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter13Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter13Exercise9">
+				<item value="U:\Java-Scibek\Chapter13Exercise9\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter13Exercise9\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter4GameZone1">
+				<item value="U:\Java-Scibek\Chapter4GameZone1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter4GameZone1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter4GameZone2">
+				<item value="U:\Java-Scibek\Chapter4GameZone2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter4GameZone2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter2Exercise4">
+				<item value="U:\Java-Scibek\Chapter2Exercise4\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter3Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter11Exercise8">
+				<item value="U:\Java-Scibek\Chapter11Exercise8\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter11Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter11Exercise5">
+				<item value="U:\Java-Scibek\Chapter11Exercise5\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter11Exercise5\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="FinalProject">
+				<item value="U:\Java-Scibek\FinalProject\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\FinalProject\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter11Exercise6">
+				<item value="U:\Java-Scibek\Chapter11Exercise6\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter11Exercise6\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter11GameZone2">
+				<item value="U:\Java-Scibek\Chapter11GameZone2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter11GameZone2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="RemoteSystemsTempFiles">
+				<item value="U:\Java-Scibek\RemoteSystemsTempFiles\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\RemoteSystemsTempFiles\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter7Exercise11">
+				<item value="U:\Java-Scibek\Chapter7Exercise11\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter7Exercise11\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter7Exercise12">
+				<item value="U:\Java-Scibek\Chapter7Exercise12\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter7Exercise12\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter5GameZone1">
+				<item value="U:\Java-Scibek\Chapter5GameZone1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter5GameZone1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter11Exercise15">
+				<item value="U:\Java-Scibek\Chapter11Exercise15\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter11Exercise15\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter5GameZone5">
+				<item value="U:\Java-Scibek\Chapter5GameZone5\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter5GameZone5\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter5GameZone4">
+				<item value="U:\Java-Scibek\Chapter5GameZone4\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter5GameZone4\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter11Exercise13">
+				<item value="U:\Java-Scibek\Chapter11Exercise13\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter11Exercise13\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter11Exercise1">
+				<item value="U:\Java-Scibek\Chapter11Exercise1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter11Exercise1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter8GameZone2">
+				<item value="U:\Java-Scibek\Chapter8GameZone2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter8GameZone2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter10Exercise1">
+				<item value="U:\Java-Scibek\Chapter10Exercise1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter10Exercise1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter13Exercise13">
+				<item value="U:\Java-Scibek\Chapter13Exercise13\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter13Exercise13\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter10Exercise3">
+				<item value="U:\Java-Scibek\Chapter10Exercise3\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter10Exercise3\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter7GameZone2">
+				<item value="U:\Java-Scibek\Chapter7GameZone2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter7GameZone2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter4Exercise2">
+				<item value="U:\Java-Scibek\Chapter4Exercise2\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter4Exercise2\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter2Exercise11">
+				<item value="U:\Java-Scibek\Chapter2Exercise11\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter3Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter4Exercise1">
+				<item value="U:\Java-Scibek\Chapter4Exercise1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter4Exercise1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter4Exercise5">
+				<item value="U:\Java-Scibek\Chapter4Exercise5\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter4Exercise5\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter13Exercise10">
+				<item value="U:\Java-Scibek\Chapter13Exercise10\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter13Exercise10\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter5Exercise5">
+				<item value="U:\Java-Scibek\Chapter5Exercise5\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter5Exercise5\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter12GameZone1">
+				<item value="U:\Java-Scibek\Chapter12GameZone1\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter12GameZone1\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter5Exercise6">
+				<item value="U:\Java-Scibek\Chapter5Exercise6\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter5Exercise6\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter5Exercise3">
+				<item value="U:\Java-Scibek\Chapter5Exercise3\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter5Exercise3\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter10Exercise9">
+				<item value="U:\Java-Scibek\Chapter10Exercise9\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter10Exercise9\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter10Exercise8">
+				<item value="U:\Java-Scibek\Chapter10Exercise8\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter10Exercise8\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter5Exercise9">
+				<item value="U:\Java-Scibek\Chapter5Exercise9\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter5Exercise9\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Chapter10Exercise6">
+				<item value="U:\Java-Scibek\Chapter10Exercise6\javadoc.xml" key="antpath"/>
+				<item value="U:\Java-Scibek\Chapter10Exercise6\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+		</section>
+	</section>
+	<section name="JavaBuildConfigurationBlock">
+		<item value="false" key="expanded2"/>
+		<item value="false" key="expanded1"/>
+		<item value="true" key="expanded0"/>
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item value="false" key="SynchronizedModifier"/>
+		<item value="false" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="FinalModifier"/>
+	</section>
+	<section name="BreadcrumbItemDropDown">
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.preferences.EditTemplateDialog_dialogBounds">
+		<item value="611" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="300" key="DIALOG_HEIGHT"/>
+		<item value="21" key="DIALOG_X_ORIGIN"/>
+		<item value="77" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="3" key="index"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="1" key="pageIndex"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+		<item value="258" key="size.y"/>
+		<item value="355" key="size.x"/>
+	</section>
+	<section name="NewPackageWizardPage">
+		<item value="false" key="create_package_info_java"/>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item value="616" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="567" key="DIALOG_HEIGHT"/>
+		<item value="135" key="DIALOG_Y_ORIGIN"/>
+		<item value="540" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="AddGetterSetterDialog">
+		<item value="false" key="SortOrdering"/>
+		<item value="false" key="RemoveFinal"/>
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+</section>

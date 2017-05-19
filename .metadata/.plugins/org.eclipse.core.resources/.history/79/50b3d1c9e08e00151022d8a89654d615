@@ -1,0 +1,160 @@
+package chapter9gamezone1;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import static betterutils.BetterUtils.*;
+public class DoesItHaveLegs
+{	
+	public static ArrayList<String> fix(ArrayList<String> list, int indice)
+	{
+		for(int i = 1; i<indice-list.size()+1; i++)
+		{
+			list.add("null");
+		}
+		return list;
+	}
+	public static Object game(ArrayList<String> whatIsIt, Scanner userKeyboard)
+	{
+		String userAnswer = " ";
+		int i = 0;
+		System.out.println("Does it have legs?");
+		userAnswer = userKeyboard.nextLine();
+		if(userAnswer.equalsIgnoreCase("no"))
+		{
+			System.out.println("Sorry, I only can play with animals"
+					+ " that have legs. GoodBye.");
+			return null;
+		}
+		try
+		{
+		while(true)
+		{
+			if(whatIsIt.get(i).charAt(whatIsIt.get(i).length()-1) == '?')
+			{
+				System.out.println("Does it have " + whatIsIt.get(i) + " ");
+				userAnswer = userKeyboard.nextLine();
+				if(userAnswer.equalsIgnoreCase((whatIsIt.get((2*i+2)))))
+				{
+						i = 2*i+2;
+						continue;
+				}
+				else if(userAnswer.equalsIgnoreCase((whatIsIt.get(2*i + 1))))
+				{
+					i = 2*i+1;
+					continue;
+			
+				}
+				else
+				{
+					System.out.println("Sorry, I couldn't understand you.");
+					break;
+				}
+			}
+			else if(whatIsIt.get(i).charAt(0) == 'a')
+			{
+				System.out.println("Is it " + whatIsIt.get(i));
+				userAnswer = userKeyboard.nextLine();
+				if(userAnswer.equalsIgnoreCase((whatIsIt.get(2*i + 2))))
+				{
+						i = 2*i+2;
+						continue;
+				}
+				else if(userAnswer.equalsIgnoreCase((whatIsIt.get(2*i + 1))))
+				{
+					i = 2*i+1;
+					continue;
+			
+				}
+				else
+				{
+					System.out.println("Sorry, I couldn't understand you.");
+					break;
+				}
+			}
+			else if(whatIsIt.get(i).equals("yes"))
+			{
+				if(whatIsIt.get((i-1)/2).charAt(0) == 'a')
+				{
+					System.out.println("I win. Let's play again.");
+					return game(whatIsIt, userKeyboard);
+				}
+				else
+				{
+					i = 2*i + 1;
+					continue;
+				}
+			}
+			else if(whatIsIt.get(i).equals("no"))
+			{
+				if(whatIsIt.get((i-1)/2).charAt(whatIsIt.get((i-1)/2).
+						length()-1) == '?')
+				{
+					i = 2*i + 2;
+					continue;
+				}
+				else
+				{
+					if(i == whatIsIt.size()-1)
+					{
+						System.out.println("I give up. What is it? ");
+						userAnswer = userKeyboard.nextLine();
+						try
+						{
+							whatIsIt = fix(whatIsIt, 2*(2*i+2) + 2);
+							whatIsIt.set((2*i)+1, "a " + userAnswer);
+							whatIsIt.set(2*(2*i+1)+1, "yes");
+							whatIsIt.set(2*(2*i+2) + 2, "no");
+						}
+						catch (Exception e)
+						{
+							System.out.println(e);
+							e.printStackTrace();
+							i = 0;
+							for(i = 0; i < whatIsIt.size(); i++)
+							{
+								System.out.println(whatIsIt.get((i)));
+							}
+							break;
+						}
+						
+						System.out.println("Let's play again.");
+						return game(whatIsIt, userKeyboard);
+					}
+					else
+					{
+						i = 2*1 + 1;
+					}
+				}
+				
+			}
+			
+		}
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+			e.printStackTrace();
+			i = 0;
+			for(i = 0; i < whatIsIt.size(); i++)
+			{
+				System.out.println(whatIsIt.get((i)));
+			}
+		}
+		return null;
+	}
+	public static void main(String[] args)
+	{
+		Scanner userKeyboard = new Scanner(System.in);
+		ArrayList<String> whatIsIt = new ArrayList<String>();
+		whatIsIt.add("a dog");
+		whatIsIt.add("yes");
+		whatIsIt.add("no");
+		for(int i = 0; i<50; i++)
+		{
+			whatIsIt.add(null);
+		}
+		print(whatIsIt.size());
+		game(whatIsIt, userKeyboard);
+		userKeyboard.close();
+	}
+}

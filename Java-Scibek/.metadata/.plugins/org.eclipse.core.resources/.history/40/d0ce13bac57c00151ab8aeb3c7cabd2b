@@ -1,0 +1,14 @@
+package (default package);	
+import java.util.Random;
+public class HelloErros
+{
+
+	public static void main(String[] args)
+	{
+		System.out.println("Hello");
+		System.out.println("This is a test");
+		Random rand = new Random();
+		int randomNumber;
+		randomNumber = rand.nextInt(10) + 1;
+	}
+}

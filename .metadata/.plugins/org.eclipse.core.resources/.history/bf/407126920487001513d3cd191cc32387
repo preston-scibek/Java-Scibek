@@ -1,0 +1,76 @@
+package chapter7exercise12;
+
+public class TaxReturn {
+	private final String SSN;
+	private final String LAST_NAME;
+	private final String FIRST_NAME;
+	private String streetAddress;
+	private String cityOfResidence;
+	private String zipCode;
+	private String stateOfResidence;
+	private int annualIncome;
+	private String isMarried;
+	private int isTaxLiability;
+	public TaxReturn(String socialNum, String lastName, String firstName,
+			String streetAdd, String cityOfRes, String zip, String stateOfRes,
+			int annIncome, String isInLove)
+	{
+		this.SSN = socialNum;
+		this.LAST_NAME = lastName;
+		this.FIRST_NAME = firstName;
+		this.streetAddress = streetAdd;
+		this.cityOfResidence = cityOfRes;
+		this.zipCode = zip;
+		this.stateOfResidence = stateOfRes;
+		this.annualIncome = annIncome;
+		this.isMarried = isInLove;
+		if(this.annualIncome<= 20000)
+		{
+			if(this.isMarried.toLowerCase() == "single")
+			{
+				this.isTaxLiability = 15;
+			}
+			else
+			{
+				this.isTaxLiability = 14;
+				
+			}
+		}
+		else
+		{
+			if(this.annualIncome>= 50001)
+			{
+				if(this.isMarried.toLowerCase() == "single")
+				{
+					this.isTaxLiability = 30;
+				}
+				else
+				{
+					this.isTaxLiability = 28;
+				}
+			}
+			else
+			{
+				if(this.isMarried.toLowerCase() == "single")
+					{
+					this.isTaxLiability = 22;
+					}
+				else
+				{
+					this.isTaxLiability = 20;
+				}
+			}
+		}
+	}
+	public void getTaxData()
+	{
+		System.out.printf("/t/t%s %s's tax return\nSSN: %s\tFirst Name: %s"
+				+ "\t\tLast Name: %s\nStreet Address: \t\tCity: %s\tState: %s"
+				+ "\tZip Code: %s\nAnnual Income: %d\tMarried: %s\n\t\tTax "
+				+ "Liability: %d",this.FIRST_NAME, this.LAST_NAME, 
+				this.SSN,
+				this.FIRST_NAME, this.LAST_NAME, this.streetAddress, 
+				this.cityOfResidence, this.stateOfResidence, this.zipCode,
+				this.annualIncome, this.isMarried, this.isTaxLiability);
+	}
+}

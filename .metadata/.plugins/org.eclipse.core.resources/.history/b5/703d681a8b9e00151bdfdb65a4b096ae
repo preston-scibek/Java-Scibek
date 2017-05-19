@@ -1,0 +1,91 @@
+package chapter13exercise10;
+
+import static betterutils.BetterUtils.println;
+import static java.nio.file.StandardOpenOption.READ;
+import static java.nio.file.StandardOpenOption.WRITE;
+
+import java.io.FileOutputStream;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CreateCustomerFile 
+{
+	/**
+	 * preps the file
+	 */
+	public static void prepFile()
+	{
+		try 
+		{
+			String blank = "000,nnaammee,21074";
+			blank =  "                  "+System.getProperty("line.separator");
+			String bankRecords = "CompanyCustomerRecords.txt";
+			FileOutputStream output = new FileOutputStream(bankRecords, true);
+			for(int i = 0; i<10000; i++)
+			{
+				output.write(blank.getBytes());
+			}
+
+			output.close();
+		}
+		catch (Exception e) 
+		{
+			println("Exception: " + e);
+		}
+	}
+	/**
+	 * uploads the data	
+	 */
+	public static void uploadData()
+	{
+		String sample =
+				"                  "+System.getProperty("line.separator");
+		Path file = Paths.get("CompanyCustomerRecords.txt");
+		Scanner keyboard = new Scanner(System.in);
+		FileChannel fc = null;
+		try
+		{
+			fc = FileChannel.open(file, READ, WRITE);
+			println("Enter an id number: ");
+			String id = keyboard.nextLine();
+			ArrayList<String> idsList = new ArrayList<String>;
+			while(!id.equalsIgnoreCase("quit"))
+			{
+				println("Enter the last name: ");
+				String lastName = keyboard.nextLine();
+				println("Enter the zip code: ");
+				String zipCode = keyboard.nextLine();
+				StringBuffer nameBuffer = new StringBuffer(lastName);
+				nameBuffer.ensureCapacity(7);
+				nameBuffer.setLength(7);
+				StringBuffer idBuffer = new StringBuffer(id);
+				idBuffer.ensureCapacity(3);
+				idBuffer.setLength(3);
+				StringBuffer zipBuffer = new StringBuffer(zipCode);
+				zipBuffer.ensureCapacity(5);
+				zipBuffer.setLength(5);
+				String record = nameBuffer.toString().replaceAll("\\W", " ")
+						+","+
+				idBuffer.toString().replaceAll("\\W", " ")+","+zipBuffer.
+				toString().replaceAll("\\W", " ");
+				fc.position(sample.length() * Integer.parseInt(id) - 
+						sample.length());
+				arrayList.add(id);
+				ByteBuffer buffer = ByteBuffer.wrap(record.getBytes());
+				fc.write(buffer);
+				println("Enter the next id or quit to exit: ");
+				id = keyboard.nextLine();
+			}
+			fc.close();
+		}
+		catch (Exception e)
+		{
+			
+		}
+		keyboard.close();
+	}
+}

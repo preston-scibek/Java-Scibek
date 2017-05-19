@@ -1,0 +1,368 @@
+package finalproject;
+import static betterutils.BetterUtils.*;
+public class Poker extends CardGame 
+{
+	enum poker {ROYALFLUSH, STRAIGHTFLUSH,FOUROFAKIND, FULLHOUSE, FLUSH, STRAIGHT,
+		THREEOFAKIND, TWOPAIR, ONEPAIR, HIGHCARDACE, HIGHCARDKING, HIGHCARDQUEEN,
+		HIGHCARDJACK, HIGHCARD10, HIGHCARD9, HIGHCARD8, HIGHCARD7,
+		HIGHCARD6, HIGHCARD5, HIGHCARD4, HIGHCARD3, HIGHCARD2 		
+		  };
+	/**
+	 * builds a poker
+	 */
+	public Poker()
+	{
+		super();
+		this.shuffle();
+	}
+	public Card[] sortList(Card[] hand)
+	{
+		int inc = 0;
+		int incTwo = 0;
+		String tempString;
+		for(inc = 0; inc < hand.length - 1; inc++)
+		{
+			for(incTwo = 0; incTwo < hand.length - 1; incTwo++)
+			{
+				if(hand[incTwo].getValue().compareToIgnoreCase(
+						hand[incTwo + 1].getValue()) 
+						> 0)
+				{
+					tempString = hand[incTwo].getValue();
+					hand[incTwo].setValue(hand[incTwo+1].getValue());
+					hand[incTwo + 1].setValue(tempString);
+				}
+			}
+		}
+		return hand;
+	}
+	/**
+	 * plays the game
+	 */
+	public void play()
+	{
+		Card[] computer = this.deal("Computer");
+		computer = sortList(computer);
+		Card[] user = this.deal("User");
+		user = sortList(user);
+		poker[] users = this.cards(user);
+		poker[] computers = this.cards(computer);
+		if(users[0].compareTo(computers[0]) < 0 )
+		{
+			println("USER: " + users[0].toString() + 
+					" COMPUTER: " + computers[0].toString());
+			this.winner();
+		}
+		else if(users[0].compareTo(computers[0]) > 0 )
+		{
+			println("USER: " + users[0].toString() + 
+					" COMPUTER: " + computers[0].toString());
+			this.loser();
+		}
+		else
+		{
+			if(users[1].compareTo(computers[1]) > 0 )
+			{
+				println("USER: " + users[0].toString() + " " + users[1].toString() + 
+						" COMPUTER: " + computers[0].toString()  + "  "
+						+ computers[1].toString());
+				this.loser();
+			}
+			else if(users[1].compareTo(computers[1]) < 0 )
+			{
+				println("USER: " + users[0].toString() + " " + users[1].toString() + 
+						" COMPUTER: " + computers[0].toString() + " "
+						+ computers[1].toString());
+				
+				this.winner();
+			}
+			else
+			{
+				println("USER: " + users[0].toString() + " " + users[1].toString() + 
+						" COMPUTER: " + computers[0].toString() + " "
+						+ computers[1].toString());
+				println("YOU TIED"):
+			}
+		}
+	}
+	/**
+	 * returns a list of ints as dice rolls
+	 * @param whoIsThisFor - player that the rolls are for
+	 * @return - array of the dice rolls
+	 */
+	public Card[] deal(String whoIsThisFor)
+	{
+		Card[] currentRollsList = new Card[5];
+		print(whoIsThisFor + " drew: ");
+		for(int i = 0; i < 5; i++)
+		{
+			if(whoIsThisFor.equalsIgnoreCase("user"))
+			{
+				currentRollsList[i] = this.cardGame[i];
+				print(currentRollsList[i].toString() + " ");
+				if(currentRollsList[i].getValue().equalsIgnoreCase("ace"))
+				{
+					currentRollsList[i].setValue("zAce");
+				}
+				else if(currentRollsList[i].getValue().equalsIgnoreCase("king"))
+				{
+					currentRollsList[i].setValue("xKing");
+				}
+				else if(currentRollsList[i].getValue().equals("10"))
+				{
+					currentRollsList[i].setValue("910");
+				}
+			}
+			else
+			{
+				currentRollsList[i] = this.cardGame[i+5];
+				print(currentRollsList[i].toString() + " ");
+				if(currentRollsList[i].getValue().equalsIgnoreCase("ace"))
+				{
+					currentRollsList[i].setValue("zAce");
+				}
+				else if(currentRollsList[i].getValue().equalsIgnoreCase("king"))
+				{
+					currentRollsList[i].setValue("xKing");
+				}
+				else if(currentRollsList[i].getValue().equals("10"))
+				{
+					currentRollsList[i].setValue("910");
+				}
+			}
+		}
+		print("\n");
+		return currentRollsList;
+	}
+	public poker[] cards(Card[] hand)
+	{
+		int curRoll = 0;
+		int highRoll = 0;
+		int inc = 0;
+		int count = 0;
+		boolean straightt = true;
+		String highNumber = "0";
+		int twoPair = 0;
+		int fullHouse = 0;
+		poker highCard = null;
+		poker pairing = null;
+		boolean flush = true;
+		boolean royalty = false;
+		if(hand[0].getValue().equals("2") && hand[1].getValue().equals("3")&&
+				hand[2].getValue().equals("4")&&hand[3].getValue().equals("5")&&
+				hand[4].equals("zAce"))
+		{
+			straightt = true;
+		}
+		else if(hand[0].getValue().equals("3") && hand[1].getValue().equals("4")&&
+				hand[2].getValue().equals("5")&&hand[3].getValue().equals("6")&&
+				hand[4].equals("7"))
+		{
+			straightt = true;
+		}
+		else if(hand[0].getValue().equals("4") && hand[1].getValue().equals("5")&&
+				hand[2].getValue().equals("6")&&hand[3].getValue().equals("7")&&
+				hand[4].equals("8"))
+		{
+			straightt = true;
+		}		
+		else if(hand[0].getValue().equals("5") && hand[1].getValue().equals("6")&&
+				hand[2].getValue().equals("7")&&hand[3].getValue().equals("8")&&
+				hand[4].equals("9"))
+		{
+			straightt = true;
+		}
+		else if(hand[0].getValue().equals("6") && hand[1].getValue().equals("7")&&
+				hand[2].getValue().equals("8")&&hand[3].getValue().equals("9")&&
+				hand[4].equals("910"))
+		{
+			straightt = true;
+		}
+		else if(hand[0].getValue().equals("7") && hand[1].getValue().equals("8")&&
+				hand[2].getValue().equals("910")&&hand[3].getValue().equals("Jack")&&
+				hand[4].equals("Queen"))
+		{
+			straightt = true;
+		}
+		else if(hand[0].getValue().equals("8") && hand[1].getValue().equals("910")&&
+				hand[2].getValue().equals("Jack")&&hand[3].getValue().equals("Queen")&&
+				hand[4].equals("xKing"))
+		{
+			straightt = true;
+		}
+		else if(hand[0].getValue().equals("910") && hand[1].getValue().equals("Jack")&&
+				hand[2].getValue().equals("Queen")&&hand[3].getValue().equals("xKing")&&
+				hand[4].equals("Ace"))
+		{
+			straightt = true;
+			if(flush && hand[0].equals("Spades"))
+			{
+				
+			}
+		}
+		else
+		{
+			straightt = false;
+		}
+		for(inc = 0; inc < hand.length; inc++)
+		{
+			if(curRoll >= highRoll)
+			{
+				highRoll = curRoll;
+				if(highRoll == 2)
+				{
+					fullHouse ++;
+					twoPair++;
+				}
+				if(highRoll == 3)
+				{
+					fullHouse ++;
+				}
+				curRoll = 0;
+			}
+			else
+			{
+				curRoll = 0;
+			}
+			for(count = 0; count < hand.length; count++)
+			{
+				flush = flush && hand[inc].getSuit()
+						.equalsIgnoreCase(hand[count].getSuit());
+				if(hand[inc].getValue().equals(hand[count].getValue()))
+				{
+					curRoll ++;
+					if(curRoll >= highRoll)
+					{
+						try
+						{
+							if(Integer.parseInt(hand[inc].getValue()) > 
+							Integer.parseInt(highNumber))
+							{
+								highNumber = hand[inc].getValue();
+							}
+						}
+						catch (Exception e)
+						{
+							if(highNumber.compareTo(hand[inc].getValue()) < 0)
+							{
+								highNumber = hand[inc].getValue();
+							}
+						}
+					}
+				}
+				else
+				{
+					continue;
+				}
+			}
+		} 
+		switch(highNumber)
+		{
+			case "2":
+				highCard = poker.HIGHCARD2;
+				break;
+			case "3":
+				highCard = poker.HIGHCARD3;
+				break;
+			case "4":
+				highCard = poker.HIGHCARD4;
+				break;
+			case "5":
+				highCard = poker.HIGHCARD5;
+				break;
+			case "6":
+				highCard = poker.HIGHCARD6;
+				break;
+			case "7":
+				highCard = poker.HIGHCARD7;
+				break;
+			case "8":
+				highCard = poker.HIGHCARD8;
+				break;
+			case "9":
+				highCard = poker.HIGHCARD9;
+				break;
+			case "10":
+				highCard = poker.HIGHCARD10;
+				break;
+			case "Jack":
+				highCard = poker.HIGHCARDJACK;
+				break;
+			case "Queen":
+				highCard = poker.HIGHCARDQUEEN;
+				break;
+			case "xKing":
+				highCard = poker.HIGHCARDKING;
+				break;
+			default:
+				highCard = poker.HIGHCARDACE;
+				break;
+		}
+		if(twoPair == 4)
+		{
+			pairing = poker.TWOPAIR;
+		}
+		else if(fullHouse == 5)
+		{
+			pairing = poker.FULLHOUSE;
+		}
+		else if(highRoll == 3)
+		{
+			pairing = poker.THREEOFAKIND;
+		}
+		else if(highRoll == 4)
+		{
+			pairing = poker.FOUROFAKIND;
+		}
+		else if(highRoll == 2)
+		{
+			pairing = poker.ONEPAIR;
+		}
+		else if(royalty)
+		{
+			pairing = poker.ROYALFLUSH;
+		}
+		else if(flush && straightt)
+		{
+			pairing = poker.STRAIGHTFLUSH;
+		}
+		else if(straightt)
+		{
+			pairing = poker.STRAIGHT;
+		}
+		else if(flush)
+		{
+			pairing = poker.FLUSH;
+		}
+		else
+		{
+			pairing = highCard;
+		}
+		poker[] pairingList = {pairing, highCard};
+		return pairingList;
+	}
+	/**
+	 * unused deal
+	 * @return - nothing
+	 */
+	@Override
+	public boolean deal() 
+	{
+		return false;
+	}
+	@Override
+	public void displayDescription()
+	{
+		println("This poker is played against the computer\n"
+				+ "The person who has the highest hand wins");
+		
+	}
+	@Override
+	public void rules() 
+	{
+		println("WINNER TABLE:\nStraight flush\nFour of a kind"
+				+ "Full house\nFlush\nStraight\nThree of a kind\nTwo pair"
+				+ "\nOne pair\nHigh card");
+		
+	}
+}

@@ -1,0 +1,31 @@
+package chapter9gamezone1;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class DoesItHaveLegs
+{
+	public static void game()
+	{
+		ArrayList<String> whatIsIt = new ArrayList<String>();
+		whatIsIt.add("Dog");
+		String userAnswer;
+		Scanner userKeyboard = new Scanner(System.in);
+		int i = 0;
+		for(i = 0; i < whatIsIt.size()/3; i+=3)
+		{
+			System.out.println("Does it have legs? ");
+			userAnswer = userKeyboard.nextLine();
+			System.out.println("Is it " + whatIsIt.get(i));
+			userAnswer = userKeyboard.nextLine();
+			if(userAnswer.toLowerCase().equals("yes"))
+			{
+				whatIsIt.add("Legs");
+			}
+		}
+	}
+	public static void main(String[] args)
+	{
+		game(0)
+	}
+}

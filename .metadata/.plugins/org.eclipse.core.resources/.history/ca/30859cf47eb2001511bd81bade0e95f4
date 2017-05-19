@@ -1,0 +1,38 @@
+package chapter6exercise9;
+import static betterutils.BetterUtils.*;
+public class WhenProfitable 
+{
+	public static void main(String[] args)
+	{
+		double grossNum = 20000;
+		String gross = String.format("%.2f", grossNum);
+		double expensesNum = 35000;
+		String expenses = String.format("%.2f", expensesNum);
+		double netNum = grossNum - expensesNum;
+		String net = String.format("%.2f", netNum);
+		String netType = (netNum > 0) ? "profit" : "loss";
+		println("Year 1\nGross Profit: $%.2f\nExpenses: $.2f\nNet %s: $%.2f", 
+				gross, expenses, netType, net);
+		for(int i = 2; i <= 20; i++)
+		{
+			grossNum *= 1.10;
+			expenses *= 1.04;
+			net = gross - expenses;
+			if(netType.equals("profit"))
+			{
+				netType = (netNum > 0) ? "profit" : "loss";
+			}
+			else
+			{
+				netType = (netNum > 0) ? "profit" : "loss";
+				if(netType.equals("profit"))
+				{
+					println("Year %d is the first year a profit was "
+							+ "recorded.", i);
+				}
+			}
+			println("Year %d\nGross Profit: $%.2f\nExpenses: $.2f\nNet "
+					+ "%s: $%.2f", i, gross, expenses, netType, net);
+		}
+	}
+}

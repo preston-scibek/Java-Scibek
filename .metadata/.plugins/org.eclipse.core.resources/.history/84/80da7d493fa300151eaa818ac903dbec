@@ -1,0 +1,181 @@
+package chapter9exercise5;
+
+import java.util.Scanner;
+
+public class SalesPersonDatabase
+{
+	/**
+	 * updates the display
+	 * @param newArray - the new array
+	 * @param counter = counte rof people
+	 */
+	public static void updateDisplay(Salesperson[] newArray, int counter)
+	{
+		int inc = 0;
+		int incTwo = 0;
+		Salesperson tempString;
+		for(inc = 0; inc < counter - 1; inc++)
+		{
+			for(incTwo = 0; incTwo < counter - 1; incTwo++)
+			{
+				if(newArray[incTwo] == null || newArray[incTwo + 1] == null)
+				{
+					continue;
+				}
+				else if(newArray[incTwo].getIDNumber() >
+						newArray[incTwo + 1].getIDNumber())
+				{
+					tempString = newArray[incTwo];
+					newArray[incTwo] = newArray[incTwo+1];
+					newArray[incTwo + 1] = tempString;
+				}
+			}
+		}
+		for(inc = 0; inc < counter; inc++)
+		{
+			if(newArray[inc] == null)
+			{
+				continue;
+			}
+			else
+			{
+			System.out.println("ID: " + newArray[inc].getIDNumber()
+					+ " Sales: " + newArray[inc].getSales());
+			}
+		}
+	}
+	public static void setupSalesArray()
+	{
+		Salesperson[] salespersonArray;
+		salespersonArray = new Salesperson[20];
+		int inc = 0;
+		Scanner userKeyboard = new Scanner(System.in);
+		int id;
+		int counter;
+		double sales;
+		String userChoice;
+		while(true)
+		{
+			System.out.print("\nType 'add' to add to database, type 'delete"
+					+ "' to delete an entry, type 'change' to change an entry "
+					+ " or quit to exit: "
+					+ " "
+					);
+			userChoice = userKeyboard.nextLine();
+			if(userChoice.equalsIgnoreCase("add"))
+			{
+				if(inc>= 20)
+				{
+					System.out.println("The database is full you.");
+				}
+				else
+				{
+					
+					System.out.print("\nEnter an id to add: ");
+					id = userKeyboard.nextInt();
+					for(counter = 0; counter <= inc; counter++)
+					{
+						if(inc != 0 && 
+								salespersonArray[counter].getIDNumber() == id)
+						{
+							System.out.println("Error that id already ex"
+									+ "ists.");
+							break;
+						}
+						else
+						{
+							System.out.print("\nEnter a sales amount: ");
+							sales = userKeyboard.nextDouble();
+							salespersonArray[inc] = new Salesperson(id, 
+									sales);
+							inc++;
+							break;
+						}
+					}		
+				}
+				updateDisplay(salespersonArray, inc);
+			}
+			else if(userChoice.equalsIgnoreCase("delete"))
+			{
+				if(inc==0)
+				{
+					System.out.println("The database is empty.");
+				}
+				else
+				{
+				
+					System.out.print("\nEnter an id to delete: ");
+					id = userKeyboard.nextInt();
+					boolean inList = false;
+					for(counter = 0; counter <= inc; counter++)
+					{
+						if(salespersonArray[counter].getIDNumber() == id)
+						{	
+							Salesperson temp = salespersonArray[inc-1];
+							salespersonArray[counter] = temp;
+							salespersonArray[inc-1] = null;
+							inc--;
+							inList = true;
+							break;
+						}
+						else
+						{
+							continue;
+						}
+					}
+					if(inList == false)
+					{
+						System.out.println("Error that id does not exist");
+					}
+					
+				}
+				updateDisplay(salespersonArray, inc);
+			}
+			else if(userChoice.equalsIgnoreCase("change"))
+			{
+				if(inc==0)
+				{
+					System.out.println("The database is empty.");
+				}
+				else
+				{
+					System.out.print("\nEnter an id to change: ");
+					id = userKeyboard.nextInt();
+					boolean inList = false;
+					for(counter = 0; counter <= inc; counter++)
+					{
+						if(salespersonArray[counter].getIDNumber() == id)
+						{
+							System.out.print("\nEnter a sales amount: ");
+							sales = userKeyboard.nextDouble();
+							salespersonArray[counter].setSalesAmout(sales);
+							inList = true;
+							break;
+						}
+						else
+						{
+							continue;
+						}
+					}
+					if(inList == false)
+					{
+						System.out.println("Error that id does not exist");
+					}	
+				}
+				updateDisplay(salespersonArray, inc);
+			}
+			else
+			{
+
+				updateDisplay(salespersonArray, inc);
+				break;
+			}
+		userKeyboard.nextLine();
+		}
+		userKeyboard.close();
+	}
+	public static void main(String[] args)
+	{
+		setupSalesArray();
+	}
+}

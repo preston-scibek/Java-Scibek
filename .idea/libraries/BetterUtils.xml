@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="BetterUtils">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Chapter13Exercise10/BetterUtils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

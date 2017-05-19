@@ -1,0 +1,87 @@
+package chapter7gamezone2;
+
+import java.util.Scanner;
+
+public class RockPaperScissors2 
+{
+	/**
+	 * RPS game between computer and user
+	 * @param userChoice - user choice
+	 */
+	public static void rockPaperScissors2(String userChoice)
+	{
+		final int SCISSORS = 1;
+		final int ROCK = 2;
+		final int PAPER = 3;
+		Die computerChoice = new Die();
+		int computerNumChoice = computerChoice.getRolledNumber();
+		switch(computerNumChoice)
+		{	case ROCK:
+				switch(userChoice)
+				{
+				case "scissors":
+					System.out.print("You both choose scissors.");
+					break;
+				case "rock":
+					System.out.print("You win, you choose rock and the "
+							+ "computer choose scissors.");
+					break;
+				case "paper":
+					System.out.print("You lose, you choose paper and the "
+							+ "computer choose scissors.");
+					break;
+				default:
+					System.out.print("Invalid choice, you lose.");
+					break;
+				}
+		case 2:
+			switch(userChoice)
+			{
+			case 1:
+				System.out.print("You lose, the you choose scissors"
+						+ " and the computer choose rock.");
+				break;
+			case 2:
+				System.out.print("You both choose rock.");
+				break;
+			case 3:
+				System.out.print("You win, you choose paper and the "
+						+ "computer choose rock.");
+				break;
+			default:
+				System.out.print("Invalid choice, you lose.");
+				break;
+			}
+		case 3:
+			switch(userChoice)
+			{
+			case 1:
+				System.out.print("You win, you choose scissors and the "
+						+ "computer choose paper.");
+				break;
+			case 2:
+				System.out.print("You lose, you choose rock and the "
+						+ "computer choose paper.");
+				break;
+			case 3:
+				System.out.print("You both choose paper.");
+				break;
+			default:
+				System.out.print("Invalid choice, you lose.");
+				break;
+			}
+			default:
+				break;
+				
+		}
+	}
+	public static void main(String[] args)
+	{
+		Scanner userRockPaperScissorsChoiceKeyboard = new Scanner(System.in);
+		System.out.print("Pick your object\nScissors\nRock\nPaper");
+		String userChoice = userRockPaperScissorsChoiceKeyboard.nextLine();
+		userRockPaperScissorsChoiceKeyboard.close();
+		rockPaperScissors2(userChoice.toLowerCase());
+	}
+}
+

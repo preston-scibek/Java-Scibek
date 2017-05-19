@@ -1,0 +1,9 @@
+package chapter11exercise1;
+import static betterutils.BetterUtils.*;
+public class UseBook 
+{
+	public static void main(String[] args)
+	{
+		demoBooks();
+	}
+}

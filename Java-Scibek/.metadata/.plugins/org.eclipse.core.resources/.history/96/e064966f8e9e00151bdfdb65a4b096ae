@@ -1,0 +1,67 @@
+package chapter13exercise10;
+
+import static java.nio.file.StandardOpenOption.READ;
+import static java.nio.file.StandardOpenOption.WRITE;
+
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+import static betterutils.BetterUtils.*;
+
+public class CustomerItemOrder 
+{
+	public static String[] getItem(String id)
+	{
+		String sample =
+				 "                      "+System.getProperty("line.separator");
+		Path file = Paths.get("CompanyItemFile.txt");
+		ArrayList<String> idsList = new ArrayList<String>();
+		FileChannel fc = null;
+		try
+		{
+			fc = FileChannel.open(file, READ, WRITE);
+		}
+		catch (Exception e) 
+		{
+			println("Exception: " + e);
+		}
+		try
+		{
+			for(int i = 1; i<=10000; i++)
+			{
+				String record = "";
+				fc.position(sample.length() * i - sample.length());
+				ByteBuffer buffer = ByteBuffer.wrap(sample.getBytes());
+				fc.read(buffer);
+				record = new String(buffer.array());
+				if(!record.equalsIgnoreCase(
+						"                   "+
+				System.getProperty("line.separator")))
+				{
+					idsList.add(record.substring(0,3));
+				}
+				else
+				{
+					continue;
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			println("Exception: " + e);
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		println("Enter your customer id: ");
+		String customerID = keyboard.nextLine();
+		println("Enter the item id: ");
+		String idtemID = keyboard.nextLine();
+		
+	}
+}

@@ -1,0 +1,19 @@
+package chapter7exercise12;
+
+public class PrepareTax
+{
+	public static void main(String[] args)
+	{
+		Scanner userInputKeyboard = new Scanner(System.in);
+		String firstName;
+		String lastName;
+		String socialSecurityNumber;
+		String streetAddress;
+		String city;
+		String state;
+		String zipCode;
+		int annualIncome;
+		String isMarried;
+		
+	}
+}

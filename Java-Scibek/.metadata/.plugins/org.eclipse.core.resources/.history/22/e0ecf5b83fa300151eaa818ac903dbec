@@ -1,0 +1,18 @@
+package chapter11exercise1;
+import static betterutils.BetterUtils.*;
+public class UseBook 
+{
+	public static void demoBooks()
+	{
+		Fiction harryPotter = new Fiction("Harry Potter and the Prisoner of Askaban");
+		NonFiction bible = new NonFiction("Bible");
+		println("\t\tFiction\nTitle: " + harryPotter.getTitle() + "\nPr"
+				+ "ice: $" + harryPotter.getPrice());
+		println("\t\tNon-Fiction\nTitle: " + bible.getTitle() + "\nPr"
+				+ "ice: $" + bible.getPrice());
+	}
+	public static void main(String[] args)
+	{
+		demoBooks();
+	}
+}

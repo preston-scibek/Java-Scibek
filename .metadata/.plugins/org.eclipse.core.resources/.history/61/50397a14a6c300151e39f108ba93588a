@@ -1,0 +1,16 @@
+package finalproject;
+
+import java.util.Scanner;
+
+public class DebugAndtest
+{
+	public static void main(String[] args)
+	{
+		// RPS works
+		// Python works
+		// Poker works
+		// BlackJack works
+		Python.python(new Scanner(System.in));
+	}
+
+}

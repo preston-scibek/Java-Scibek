@@ -1,0 +1,135 @@
+package chapter7gamezone2;
+
+import java.util.Scanner;
+
+public class RockPaperScissors2 
+{
+	/**
+	 * RPS game between computer and user
+	 * @param userChoice - user choice
+	 * @param score - current score 
+	 */
+	public static String rockPaperScissors2(String userChoice, String score)
+	{
+		final int SCISSORS = 1;
+		final int ROCK = 2;
+		final int PAPER = 3;
+		final String ROCK_USER = "rock";
+		final String PAPER_USER = "paper";
+		final String SCISSORS_USER = "scissors";
+		Die computerChoice = new Die();
+		int computerNumChoice = computerChoice.getRolledNumber();
+		switch(computerNumChoice)
+		{	
+			case SCISSORS:
+				switch(userChoice)
+				{
+				case SCISSORS_USER:
+					System.out.print("You both choose scissors.");
+					return Character.toString(score.charAt(0)) +
+							Character.toString(score.charAt(1)) + 
+							
+							
+							
+				case ROCK_USER:
+					System.out.print("You win, you choose rock and the "
+							+ "computer choose scissors.");
+					break;
+				case PAPER_USER:
+					System.out.print("You lose, you choose paper and the "
+							+ "computer choose scissors.");
+					break;
+				default:
+					System.out.print("Invalid choice, you lose.");
+					break;
+				}
+		case ROCK:
+			switch(userChoice)
+			{
+			case SCISSORS_USER:
+				System.out.print("You lose, the you choose scissors"
+						+ " and the computer choose rock.");
+				break;
+			case ROCK_USER:
+				System.out.print("You both choose rock.");
+				break;
+			case PAPER_USER:
+				System.out.print("You win, you choose paper and the "
+						+ "computer choose rock.");
+				break;
+			default:
+				System.out.print("Invalid choice, you lose.");
+				break;
+			}
+		case PAPER:
+			switch(userChoice)
+			{
+			case SCISSORS_USER:
+				System.out.print("You win, you choose scissors and the "
+						+ "computer choose paper.");
+				break;
+			case ROCK_USER:
+				System.out.print("You lose, you choose rock and the "
+						+ "computer choose paper.");
+				break;
+			case PAPER_USER:
+				System.out.print("You both choose paper.");
+				break;
+			default:
+				System.out.print("Invalid choice, you lose.");
+				break;
+			}
+			default:
+				break;
+				
+		}
+	}
+	public static void beginBame()
+	{
+		Scanner userRockPaperScissorsChoiceKeyboard = new Scanner(System.in);
+		System.out.print("Pick your object\nScissors\nRock\nPaper");
+		String userChoice = userRockPaperScissorsChoiceKeyboard.nextLine();
+		boolean canStart = false;
+		String userFirstTwoCharacters;
+		while(canStart != true)
+		{
+			System.out.print("Pick your object\nScissors\nRock\nPaper");
+			userChoice = userRockPaperScissorsChoiceKeyboard.nextLine();
+			userFirstTwoCharacters = 
+			Character.toString(userChoice.charAt(0)) +
+				Character.toString(userChoice.charAt(1));
+			if(userFirstTwoCharacters.equals("sc"))
+			{
+				userChoice = "scissors";
+				canStart = true;
+				break;
+			}
+			else if(userFirstTwoCharacters.equals("ro"))
+			{
+				userChoice = "rock";
+				canStart = true;
+				break;
+			}
+			else if(userFirstTwoCharacters.equals("pa"))
+			{
+				userChoice = "paper";
+				canStart = true;
+				break;
+			}
+			else{
+				continue;
+			}
+		}
+		string score = "000";
+		int inc = 0;
+		for(inc = 0; inc < 10; inc++)
+		{
+		score = rockPaperScissors2(userChoice.toLowerCase(), score);
+		}}
+	public static void main(String[] args)
+	{
+
+
+	}
+}
+

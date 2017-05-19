@@ -1,0 +1,15 @@
+package chapter10exercise1;
+import static betterutils.BetterUtils.*;
+
+import java.util.Scanner;
+public class DemoHorses 
+{
+	public static void demoHorses()
+	{
+		
+	}
+	public static void main(String[] args)
+	{
+		demoHorses();
+	}
+}

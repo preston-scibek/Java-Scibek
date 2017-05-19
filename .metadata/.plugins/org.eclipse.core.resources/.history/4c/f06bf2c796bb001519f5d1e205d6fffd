@@ -1,0 +1,45 @@
+package chapter6gamezone2;
+
+import java.util.Random;
+import javax.swing.JOptionPane;
+
+public class RandomGuess3
+{
+	/**
+	 * random guess, continues until guess correctly
+	 */
+	public static void randGuess()
+	{
+		Random rand;
+		rand = new Random();
+		int randomNumber = rand.nextInt(10) + 1;
+		int numOfGuesses = 1;
+		String myNumber = JOptionPane.showInputDialog(
+				"Guess a random number " + "between 1 and 10:");
+		int myNumberInt = Integer.parseInt(myNumber);
+		while(myNumberInt != randomNumber)
+		{
+
+			if(myNumberInt > randomNumber)
+			{
+				JOptionPane.showMessageDialog(null, "Your guess was to high.");
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "Your guess was to low.");
+			}
+			myNumber = JOptionPane.showInputDialog(
+					"Guess a random number " + "between 1 and 10:");
+			myNumberInt = Integer.parseInt(myNumber);
+			numOfGuesses++;
+		}
+		JOptionPane.showMessageDialog(null, "You guessed correctly!!!");
+		JOptionPane.showMessageDialog(null,
+				"It took you " + numOfGuesses + " to guess correctly");
+	}
+
+	public static void main(String[] args)
+	{
+		randGuess();
+	}
+}

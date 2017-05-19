@@ -1,0 +1,92 @@
+package chapter11gamezone2;
+import java;
+public abstract class CardGame 
+{
+	protected Card[] cardGame  = new Card[52];
+	protected int cardToPlayer;
+	public cardGame()
+	{
+		for(int i = 1; i<5; i++)
+		{
+			for(int j = 1; j<15; j++)
+			{
+				if(i == 1)
+				{
+					cardGame[j*i] = new Card();
+					cardGame[j*i].setSuit("Hearts");
+					switch(j)
+					{
+						case 11:
+							cardGame[j*i].setValue("Jack");
+						case 12:
+							cardGame[j*i].setValue("Quuen");
+						case 13:
+							cardGame[j*i].setValue("King");
+						case 14:
+							cardGame[j*i].setValue("Ace");
+						default:
+							cardGame[j*i].setValue(Integer.toString(j));
+							break;
+					}
+				}
+				if(i == 2)
+				{
+					cardGame[j*i] = new Card();
+					cardGame[j*i].setSuit("Clubs");
+					switch(j)
+					{
+						case 11:
+							cardGame[j*i].setValue("Jack");
+						case 12:
+							cardGame[j*i].setValue("Quuen");
+						case 13:
+							cardGame[j*i].setValue("King");
+						case 14:
+							cardGame[j*i].setValue("Ace");
+						default:
+							cardGame[j*i].setValue(Integer.toString(j));
+							break;
+					}
+				}
+				if(i == 3)
+				{
+					cardGame[j*i] = new Card();
+					cardGame[j*i].setSuit("Diamonds");
+					switch(j)
+					{
+						case 11:
+							cardGame[j*i].setValue("Jack");
+						case 12:
+							cardGame[j*i].setValue("Quuen");
+						case 13:
+							cardGame[j*i].setValue("King");
+						case 14:
+							cardGame[j*i].setValue("Ace");
+						default:
+							cardGame[j*i].setValue(Integer.toString(j));
+							break;
+					}
+				}
+				if(i == 4)
+				{
+					cardGame[j*i] = new Card();
+					cardGame[j*i].setSuit("Spades");
+					switch(j)
+					{
+						case 11:
+							cardGame[j*i].setValue("Jack");
+						case 12:
+							cardGame[j*i].setValue("Quuen");
+						case 13:
+							cardGame[j*i].setValue("King");
+						case 14:
+							cardGame[j*i].setValue("Ace");
+						default:
+							cardGame[j*i].setValue(Integer.toString(j));
+							break;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package chapter8exercise9;
+
+public class PhoneNumbers 
+{
+	public static void phoneNumberDirectory()
+	{
+		String[] firstNameArrayParallel;
+		int[] phoneNumberArrayParallel;
+		firstNameArrayParallel = new String[30];
+		phoneNumberArrayParallel = new int[30];
+	}
+	
+}

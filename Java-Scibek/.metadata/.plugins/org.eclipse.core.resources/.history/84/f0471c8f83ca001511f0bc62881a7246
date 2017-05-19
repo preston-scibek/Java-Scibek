@@ -1,0 +1,150 @@
+package finalproject;
+
+import static betterutils.BetterUtils.*;
+import java.util.Random; // Supporting Class
+
+public class BlackJack extends CardGame // Sub Class
+{
+	int userCount;
+	int computerCount;
+
+	/**
+	 * builds a black jack game
+	 */
+	public BlackJack()
+	{
+		super();
+		this.shuffle();
+		Random rand = new Random(); // Implements Random
+		this.cardToPlayer = 2;
+		this.computerCount = rand.nextInt(6) + 17;
+	}
+
+	/**
+	 * deals card to the player
+	 * @return - whether or not the game continues
+	 */
+	@Override
+	public boolean deal()
+	{
+
+		int tempDepth = this.depthInDeck;
+		for(int i = tempDepth; i < tempDepth + this.cardToPlayer; i++) 
+															// Loop 11
+		{
+			println("Player was dealt " + deck[i].getValue() + " of "
+					+ this.deck[i].getSuit());
+			this.depthInDeck += 1;
+			if(deck[i].getValue().toLowerCase().equalsIgnoreCase("jack"))
+															// If Statement
+			{
+				this.userCount += 10;
+			}
+			else if(deck[i].getValue().toLowerCase()
+					.equalsIgnoreCase("queen"))
+			{
+				this.userCount += 10;
+			}
+			else if(deck[i].getValue().toLowerCase()
+					.equalsIgnoreCase("ace"))
+			{
+				this.userCount += 11;
+			}
+			else if(deck[i].getValue().toLowerCase()
+					.equalsIgnoreCase("king"))
+			{
+				this.userCount += 10;
+			}
+			else
+			{
+				this.userCount += Integer.parseInt(deck[i].getValue());
+			}
+
+			if(this.userCount > 21) // If Statement
+			{
+
+				return this.end();
+			}
+		}
+		this.cardToPlayer = 1;
+		return true;
+	}
+
+	/**
+	 * displays the description
+	 */
+	@Override
+	public void displayDescription()
+	{
+		println("BLACKJACK:\nA card game in which players try \n"
+				+ "to acquire cards with a face value as close \n"
+				+ "as possible to 21 without going over.");
+	}
+
+	/**
+	 * hits
+	 * @return - whether or not the game continues
+	 */
+	public boolean hit()
+	{
+		return this.deal();
+	}
+
+	/**
+	 * users stays their turn
+	 */
+	public void stay()
+	{
+		this.end();
+	}
+
+	/**
+	 * ends the game
+	 * @return - if busted
+	 */
+	public boolean end()
+	{
+		if((this.userCount > this.computerCount && this.userCount < 22)
+				|| (this.computerCount > 21 && this.userCount < 22)) 
+														// If Statement
+		{
+			this.winner();
+			println("YOU WIN %d to %s", this.userCount,
+					this.computerCount > 21 ? "BUSTED" : this.computerCount);
+		}
+		else
+		{
+			this.loser();
+			println("YOU lose %s to %d",
+					this.userCount > 21 ? "BUSTED" : this.userCount,
+					this.computerCount);
+		}
+		return false;
+	}
+
+	/**
+	 * prints the rules
+	 */
+	@Override
+	public void rules()
+	{
+		println("Get 21 points on the player's first two cards"
+				+ " (called a blackjack) without a dealer blackjack"
+				+ "\nReach a final score higher than the dealer"
+				+ " without exceeding 21\nor Let the dealer draw "
+				+ " additional cards until his or her hand exceeds" + " 21.");
+
+	}
+
+	/**
+	 * unused deal
+	 * @param string - nothing
+	 * @return - nothing
+	 */
+	@Override
+	public Card[] deal(String string)
+	{
+		return null;
+	}
+
+}

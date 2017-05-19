@@ -1,0 +1,42 @@
+package chapter10gamezone2;
+
+import static betterutils.BetterUtils.*;
+
+public class TestLoadedDie
+{
+	public static void testDie()
+	{
+		Die die1 = new Die();
+		Die die2 = new Die();
+		LoadedDie loadedDie = new LoadedDie();
+		int die1GreaterDie2 = 0;
+		for(int i = 0; i < 1000; i++)
+		{
+			if(die1.getRolledNumber() > die2.getRolledNumber())
+			{
+				die1GreaterDie2 += 1;
+			}
+			die1.setRolledNumber();
+			die2.setRolledNumber();
+		}
+		println("Die One vs Die Two:\nBoth Normal Dice:\n"
+				+ "Die One: %d / 1000 wins", die1GreaterDie2);
+		die1GreaterDie2 = 0;
+		for(int i = 0; i < 1000; i++)
+		{
+			if(loadedDie.getRolledNumber() < die1.getRolledNumber())
+			{
+				die1GreaterDie2 += 1;
+			}
+			loadedDie.setRolledNumber();
+			die1.setRolledNumber();
+		}
+		println("\nDie One vs Die L:\nOne Normal One Loaded:\n"
+				+ "Die One: %d / 1000 wins", die1GreaterDie2);
+	}
+
+	public static void main(String[] args)
+	{
+		testDie();
+	}
+}

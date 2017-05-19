@@ -1,0 +1,113 @@
+package finalproject;
+// Supporting Class
+import static betterutils.BetterUtils.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class BinaryTree implements Serializable
+{
+	private static final long serialVersionUID = 1L;
+	private Node root;
+	private String[] tree; // Array
+	private ArrayList<String> printTree;
+
+	/**
+	 * makes binary tree
+	 * @param data - data of root node;
+	 */
+	public BinaryTree(String data)
+	{
+
+		setRoot(new Node(data, this));
+		root.setIsRoot(true);
+		printTree = new ArrayList<String>();
+	}
+
+	/**
+	 * gets root node
+	 * @return - the root node
+	 */
+	public Node getRoot()
+	{
+		return root;
+	}
+
+	/**
+	 * sets a new root node
+	 * @param root - new root node
+	 */
+	public void setRoot(Node root)
+	{
+		this.root = root;
+		root.setIsRoot(true);
+	}
+
+	/**
+	 * prints the tree
+	 */
+	public void printTree()
+	{
+		root.printNodes();
+	}
+
+	/**
+	 * builds the tree of the computers memory and then prints it out
+	 */
+	public void buildTree()
+	{
+		int numberOfNodes = root.countNodes();
+		println(numberOfNodes);
+		/*String buffer = " ";
+		tree = new String[numberOfNodes + 4];
+		for(int i = 0; i <= numberOfNodes + 3; i++) // Loop 1
+		{
+			buffer = " ";
+			for(int j = 0; j < numberOfNodes - i; j++) // Loop 2
+			{
+				buffer = buffer.concat("\t");
+			}
+			tree[i] = buffer;
+		}*/
+		root.printNodes("");
+		println(printTree.size());
+		for(String node : printTree)
+		{
+			println(node);
+		}
+
+	}
+
+	/**
+	 * @return the tree
+	 */
+	public String[] getTree() // Method That Returns Array
+	{
+		return tree;
+	}
+
+	/**
+	 * @param tree - the tree to set
+	 */
+	public void setTree(String[] tree) // Method That Takes Array As Argument
+	{
+		this.tree = tree;
+	}
+
+	/**
+	 * gets the printTree
+	 * @return - the printTree
+	 */
+	public ArrayList<String> getPrintTree()
+	{
+		return printTree == null ? new ArrayList<String>() : printTree;
+	}
+
+	/**
+	 * sets the printTree
+	 * @param printTree - the new printTree to set
+	 */
+	public void setPrintTree(ArrayList<String> printTree)
+	{
+		this.printTree = printTree;
+	}
+}

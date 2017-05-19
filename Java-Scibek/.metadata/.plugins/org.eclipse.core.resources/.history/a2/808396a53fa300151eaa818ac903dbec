@@ -1,0 +1,13 @@
+package chapter10gamezone2;
+import static betterutils.BetterUtils.*;
+public class TestLoadedDie 
+{
+	public static void testDie()
+	{
+		
+	}
+	public static void main(String[] args)
+	{
+		testDie();
+	}
+}

@@ -1,0 +1,52 @@
+package chapter10exercise3;
+import static betterutils.BetterUtils.*;
+
+import java.util.Scanner;
+public class DemoItemsAndPets 
+{
+	public static void demoItems()
+	{
+		Scanner keyboard = new Scanner(System.in);
+		PetSold userPet;
+		ItemSold userItem;
+		println("Enter the invoice number: ");
+		int userInvoice = keyboard.nextInt();
+		println("Enter the price: ");
+		double userPrice = keyboard.nextDouble();
+		println("Enter the description: ");
+		keyboard.nextLine();
+		String userDescription = keyboard.nextLine();
+		userItem = new ItemSold(userInvoice, userDescription, userPrice);
+		println("Enter the invoice number: ");
+		userInvoice = keyboard.nextInt();
+		println("Enter the price: ");
+		userPrice = keyboard.nextDouble();
+		keyboard.nextLine();
+		println("Enter the description: ");
+		userDescription = keyboard.nextLine();
+		println("Is it vaccinated: ");
+		boolean isVaccinated = keyboard.nextBoolean();
+		println("Is it neutered: ");
+		boolean isNeutered = keyboard.nextBoolean();
+		println("Is it housebroken: ");
+		boolean isHousebroken = keyboard.nextBoolean();
+		userPet = new PetSold(userInvoice, userDescription, userPrice,
+				isVaccinated, isNeutered, isHousebroken);
+		println("Item\nInvoice Number: " + userItem.getInvoiceNumber() +
+				"\nPrice: " + userItem.getPrice() + "\nDescription: " +
+				userItem.getDescription());
+		println("\nPet\nInvoice Number: " + userPet.getInvoiceNumber() +
+				"\nPrice: " + userPet.getPrice() + "\nDescription: " +
+				userPet.getDescription() + "\nVaccinated: " +
+				userPet.getIsVaccinated() + "\nNeutered: " +
+				userPet.getIsNeutered() + "\nHousebroken: " +
+				userPet.getIsHousebroken());
+		keyboard.close();
+		
+		
+	}
+	public static void main(String[] args)
+	{
+		demoItems();
+	}
+}
